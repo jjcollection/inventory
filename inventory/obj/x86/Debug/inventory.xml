@@ -1,0 +1,468 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+inventory
+</name>
+</assembly>
+<members>
+<member name="T:inventory.dbInventoryDataSet.BarangDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.JenisDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.MerkDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PembelianDetilDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PembelianMasterDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PengaturanDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PengeluaranDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.SupplierDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.GridBarangDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.GridPembelianDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.BarangRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.JenisRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.MerkRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PembelianDetilRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PembelianMasterRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PengaturanRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PengeluaranRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.SupplierRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.GridBarangRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.GridPembelianRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.BarangRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.JenisRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.MerkRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PembelianDetilRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PembelianMasterRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PengaturanRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PengeluaranRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.SupplierRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.GridBarangRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.GridPembelianRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.BarangTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.JenisTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.MerkTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.PembelianDetilTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.PembelianMasterTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.PengaturanTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.PengeluaranTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.SupplierTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.GridBarangTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.GridPembelianTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(inventory.dbInventoryDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(inventory.dbInventoryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(inventory.dbInventoryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateAll(inventory.dbInventoryDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Add_Shopping_Cart_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Back_Arrow_16px_green">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Back_Arrow_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Buy_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Buy_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Calendar_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Calendar_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Cancel_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Circled_Right_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Coins_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Coins_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Create_Document_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Deliver_Food_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Edit_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Edit_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Eraser_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Eraser_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Forward_Button_16px_green">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Forward_Button_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Happy_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Increase_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Invoice_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Invoice_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Lightning_Bolt_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Luggage_Trolley_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Luggage_Trolley_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Menu_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Menu_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Menu_White">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Money_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Monitor_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Move_Stock_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Move_Stock_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Person_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Plus_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Plus_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Plus_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Plus_Math_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Plus_Math_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Printer_Maintenance_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Purchase_Order_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Reset_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Reset_16px_green">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Sales_Channels">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Sales_Channels_32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Save_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Save_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Search_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Search_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Search_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Settings_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Shopping_Cart_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Shopping_Cart_32px_silver">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Shopping_Cart_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Shutdown_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Shutdown_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Staff_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Sync_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Tire_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.Trash_Can_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.User_16px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:inventory.My.Resources.Resources.User_32px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:inventory.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

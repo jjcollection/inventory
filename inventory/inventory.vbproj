@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5692F4CB-0DE0-4140-93C4-2F16A9227B95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>inventory.My.MyApplication</StartupObject>
+    <RootNamespace>inventory</RootNamespace>
+    <AssemblyName>inventory</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>inventory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>inventory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbInventoryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPembelian.Designer.vb">
+      <DependentUpon>DialogPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarang.Designer.vb">
+      <DependentUpon>FormBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPembelian.Designer.vb">
+      <DependentUpon>FormPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuUtama.Designer.vb">
+      <DependentUpon>MenuUtama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPembelian.resx">
+      <DependentUpon>DialogPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarang.resx">
+      <DependentUpon>FormBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPembelian.resx">
+      <DependentUpon>FormPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUtama.resx">
+      <DependentUpon>MenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dbInventoryDataSet.xsc">
+      <DependentUpon>dbInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbInventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbInventoryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbInventoryDataSet.xss">
+      <DependentUpon>dbInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Shopping Cart_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back Arrow_16px+green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back Arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buy_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buy_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled Right_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eraser_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward Button_16px+green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward Button_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luggage Trolley_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luggage Trolley_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitor_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Move Stock_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Move Stock_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Math_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer Maintenance_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purchase Order_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_16px_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales Channels.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales_Channels_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_32px_silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staff_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sync_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash Can_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eraser_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Math_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tire_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create Document_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deliver Food_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Increase_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lightning Bolt_25px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

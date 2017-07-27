@@ -70,6 +70,20 @@
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
 
+        Try
+            Me.GridPembelianTableAdapter.FillByKode(Me.DbInventoryDataSet.GridPembelian, TextBox1.Text)
+            Dim dt = GridPembelianTableAdapter.GetDataByKode(TextBox1.Text)
+            txtNo.Text = dt.Rows(0).Item("idPembelianMaster")
+            txtTgl.Text = dt.Rows(0).Item("tanggalBeli")
+            IdSupplierComboBox.SelectedValue = dt.Rows(0).Item("idSupplier")
+            Dim total = PembelianDetilTableAdapter.ScalarSumSubTotal(txtNo.Text)
+            Dim jitem = PembelianDetilTableAdapter.ScalarItem(txtNo.Text)
+            lbTotal.Text = "Total : " & Format(total, "Currency")
+            lbItem.Text = "Item : " & jitem
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+      
     End Sub
 
     Private Sub GridBarangDataGridView_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles GridBarangDataGridView.CellClick
@@ -79,7 +93,7 @@
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         DialogPembelian.NamaBarangComboBox.SelectedValue = GridBarangDataGridView.SelectedCells(2).Value
         DialogPembelian.TextBox1.Text = GridBarangDataGridView.SelectedCells(8).Value
-        DialogPembelian.lb.Text = GridBarangDataGridView.SelectedCells(0).Value
+        DialogPembelian.lb.Text = GridBarangDataGridView.SelectedCells(1).Value
         DialogPembelian.ShowDialog()
     End Sub
 End Class

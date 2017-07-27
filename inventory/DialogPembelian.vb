@@ -4,7 +4,7 @@ Public Class DialogPembelian
     Public lb As New Label
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         If lb.Text <> "" Then
-            PembelianDetilTableAdapter.UpdateQuery(FormPembelian.txtNo.Text, NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), 0, "Sedang Dipesan")
+            PembelianDetilTableAdapter.UpdateQuery(NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), lb.Text)
             FormPembelian.tampilPembelian()
             lb.Text = ""
         Else

@@ -46,15 +46,6 @@ Partial Class FormPembelian
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GridBarangDataGridView = New System.Windows.Forms.DataGridView()
-        Me.GridPembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.SupplierTableAdapter = New inventory.dbInventoryDataSetTableAdapters.SupplierTableAdapter()
-        Me.TableAdapterManager = New inventory.dbInventoryDataSetTableAdapters.TableAdapterManager()
-        Me.GridPembelianTableAdapter = New inventory.dbInventoryDataSetTableAdapters.GridPembelianTableAdapter()
-        Me.PembelianMasterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PembelianMasterTableAdapter = New inventory.dbInventoryDataSetTableAdapters.PembelianMasterTableAdapter()
-        Me.PembelianDetilBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PembelianDetilTableAdapter = New inventory.dbInventoryDataSetTableAdapters.PembelianDetilTableAdapter()
         Me.IdPembelianMasterDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdPembelianDetilDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.kodeBarang = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -66,6 +57,15 @@ Partial Class FormPembelian
         Me.JumlahBeliDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HargaBeliDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubTotalBeliDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GridPembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.SupplierTableAdapter = New inventory.dbInventoryDataSetTableAdapters.SupplierTableAdapter()
+        Me.TableAdapterManager = New inventory.dbInventoryDataSetTableAdapters.TableAdapterManager()
+        Me.GridPembelianTableAdapter = New inventory.dbInventoryDataSetTableAdapters.GridPembelianTableAdapter()
+        Me.PembelianMasterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PembelianMasterTableAdapter = New inventory.dbInventoryDataSetTableAdapters.PembelianMasterTableAdapter()
+        Me.PembelianDetilBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PembelianDetilTableAdapter = New inventory.dbInventoryDataSetTableAdapters.PembelianDetilTableAdapter()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SupplierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +104,7 @@ Partial Class FormPembelian
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(261, 30)
         Me.TextBox1.TabIndex = 5
+        Me.TextBox1.Text = "-- No Pemesanan --"
         '
         'Panel3
         '
@@ -365,59 +366,6 @@ Partial Class FormPembelian
         Me.GridBarangDataGridView.Size = New System.Drawing.Size(1056, 544)
         Me.GridBarangDataGridView.TabIndex = 0
         '
-        'GridPembelianBindingSource
-        '
-        Me.GridPembelianBindingSource.DataMember = "GridPembelian"
-        Me.GridPembelianBindingSource.DataSource = Me.DbInventoryDataSet
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.GridBarangDataGridView)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 31)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1056, 544)
-        Me.Panel2.TabIndex = 1
-        '
-        'SupplierTableAdapter
-        '
-        Me.SupplierTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.BarangTableAdapter = Nothing
-        Me.TableAdapterManager.JenisTableAdapter = Nothing
-        Me.TableAdapterManager.MerkTableAdapter = Nothing
-        Me.TableAdapterManager.PembelianDetilTableAdapter = Nothing
-        Me.TableAdapterManager.PembelianMasterTableAdapter = Nothing
-        Me.TableAdapterManager.PengaturanTableAdapter = Nothing
-        Me.TableAdapterManager.PengeluaranTableAdapter = Nothing
-        Me.TableAdapterManager.SupplierTableAdapter = Me.SupplierTableAdapter
-        Me.TableAdapterManager.UpdateOrder = inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'GridPembelianTableAdapter
-        '
-        Me.GridPembelianTableAdapter.ClearBeforeFill = True
-        '
-        'PembelianMasterBindingSource
-        '
-        Me.PembelianMasterBindingSource.DataMember = "PembelianMaster"
-        Me.PembelianMasterBindingSource.DataSource = Me.DbInventoryDataSet
-        '
-        'PembelianMasterTableAdapter
-        '
-        Me.PembelianMasterTableAdapter.ClearBeforeFill = True
-        '
-        'PembelianDetilBindingSource
-        '
-        Me.PembelianDetilBindingSource.DataMember = "PembelianDetil"
-        Me.PembelianDetilBindingSource.DataSource = Me.DbInventoryDataSet
-        '
-        'PembelianDetilTableAdapter
-        '
-        Me.PembelianDetilTableAdapter.ClearBeforeFill = True
-        '
         'IdPembelianMasterDataGridViewTextBoxColumn
         '
         Me.IdPembelianMasterDataGridViewTextBoxColumn.DataPropertyName = "idPembelianMaster"
@@ -505,6 +453,59 @@ Partial Class FormPembelian
         Me.SubTotalBeliDataGridViewTextBoxColumn.HeaderText = "SubTotal"
         Me.SubTotalBeliDataGridViewTextBoxColumn.Name = "SubTotalBeliDataGridViewTextBoxColumn"
         Me.SubTotalBeliDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'GridPembelianBindingSource
+        '
+        Me.GridPembelianBindingSource.DataMember = "GridPembelian"
+        Me.GridPembelianBindingSource.DataSource = Me.DbInventoryDataSet
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.GridBarangDataGridView)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 31)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1056, 544)
+        Me.Panel2.TabIndex = 1
+        '
+        'SupplierTableAdapter
+        '
+        Me.SupplierTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BarangTableAdapter = Nothing
+        Me.TableAdapterManager.JenisTableAdapter = Nothing
+        Me.TableAdapterManager.MerkTableAdapter = Nothing
+        Me.TableAdapterManager.PembelianDetilTableAdapter = Nothing
+        Me.TableAdapterManager.PembelianMasterTableAdapter = Nothing
+        Me.TableAdapterManager.PengaturanTableAdapter = Nothing
+        Me.TableAdapterManager.PengeluaranTableAdapter = Nothing
+        Me.TableAdapterManager.SupplierTableAdapter = Me.SupplierTableAdapter
+        Me.TableAdapterManager.UpdateOrder = inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'GridPembelianTableAdapter
+        '
+        Me.GridPembelianTableAdapter.ClearBeforeFill = True
+        '
+        'PembelianMasterBindingSource
+        '
+        Me.PembelianMasterBindingSource.DataMember = "PembelianMaster"
+        Me.PembelianMasterBindingSource.DataSource = Me.DbInventoryDataSet
+        '
+        'PembelianMasterTableAdapter
+        '
+        Me.PembelianMasterTableAdapter.ClearBeforeFill = True
+        '
+        'PembelianDetilBindingSource
+        '
+        Me.PembelianDetilBindingSource.DataMember = "PembelianDetil"
+        Me.PembelianDetilBindingSource.DataSource = Me.DbInventoryDataSet
+        '
+        'PembelianDetilTableAdapter
+        '
+        Me.PembelianDetilTableAdapter.ClearBeforeFill = True
         '
         'FormPembelian
         '

@@ -49,6 +49,8 @@ Partial Class DialogPembelian
         Me.PembelianDetilBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PembelianDetilTableAdapter = New inventory.dbInventoryDataSetTableAdapters.PembelianDetilTableAdapter()
         Me.HargaBeliLabel1 = New System.Windows.Forms.Label()
+        Me.PembelianMasterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PembelianMasterTableAdapter = New inventory.dbInventoryDataSetTableAdapters.PembelianMasterTableAdapter()
         NamaBarangLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         HargaBeliLabel = New System.Windows.Forms.Label()
@@ -58,6 +60,7 @@ Partial Class DialogPembelian
         CType(Me.BarangBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DbInventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PembelianDetilBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PembelianMasterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NamaBarangLabel
@@ -100,7 +103,7 @@ Partial Class DialogPembelian
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(248, 132)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(234, 128)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -149,7 +152,7 @@ Partial Class DialogPembelian
         Me.BarangBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BarangBindingNavigator.Name = "BarangBindingNavigator"
         Me.BarangBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BarangBindingNavigator.Size = New System.Drawing.Size(432, 25)
+        Me.BarangBindingNavigator.Size = New System.Drawing.Size(418, 25)
         Me.BarangBindingNavigator.TabIndex = 1
         Me.BarangBindingNavigator.Text = "BindingNavigator1"
         '
@@ -285,13 +288,22 @@ Partial Class DialogPembelian
         Me.HargaBeliLabel1.TabIndex = 7
         Me.HargaBeliLabel1.Text = "0"
         '
+        'PembelianMasterBindingSource
+        '
+        Me.PembelianMasterBindingSource.DataMember = "PembelianMaster"
+        Me.PembelianMasterBindingSource.DataSource = Me.DbInventoryDataSet
+        '
+        'PembelianMasterTableAdapter
+        '
+        Me.PembelianMasterTableAdapter.ClearBeforeFill = True
+        '
         'DialogPembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(432, 186)
+        Me.ClientSize = New System.Drawing.Size(418, 182)
         Me.Controls.Add(HargaBeliLabel)
         Me.Controls.Add(Me.HargaBeliLabel1)
         Me.Controls.Add(Me.TextBox1)
@@ -317,6 +329,7 @@ Partial Class DialogPembelian
         CType(Me.BarangBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DbInventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PembelianDetilBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PembelianMasterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -343,5 +356,7 @@ Partial Class DialogPembelian
     Friend WithEvents PembelianDetilBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PembelianDetilTableAdapter As inventory.dbInventoryDataSetTableAdapters.PembelianDetilTableAdapter
     Friend WithEvents HargaBeliLabel1 As System.Windows.Forms.Label
+    Friend WithEvents PembelianMasterBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PembelianMasterTableAdapter As inventory.dbInventoryDataSetTableAdapters.PembelianMasterTableAdapter
 
 End Class

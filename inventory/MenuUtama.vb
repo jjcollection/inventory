@@ -86,7 +86,7 @@ Public Class MenuUtama
 
     End Sub
 
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click, Label4.Click, Label3.Click
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click, Label3.Click
         FormBarang.MdiParent = Me
         FormBarang.WindowState = FormWindowState.Maximized
         FormBarang.Show()
@@ -100,5 +100,11 @@ Public Class MenuUtama
         FormPembelian.MdiParent = Me
         FormPembelian.WindowState = FormWindowState.Maximized
         FormPembelian.Show()
+    End Sub
+
+    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
+        FormTerimaBarang.MdiParent = Me
+        FormTerimaBarang.WindowState = FormWindowState.Maximized
+        FormTerimaBarang.Show()
     End Sub
 End Class

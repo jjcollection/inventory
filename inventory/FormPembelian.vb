@@ -2,8 +2,10 @@
     Dim tbl As New DataTable
     Dim tgl, tahun, digit, kodebr As String
     Dim subtotal, hargabr As Double
-    Dim total, item As Double
+    Public total, item As Double
+
     Sub kode_otomatis()
+        PembelianMasterTableAdapter.DeletePembelianItemNol()
         tgl = Date.Now.Day
         tahun = Date.Now.Year
         digit = Microsoft.VisualBasic.Right(tahun, 2)
@@ -40,14 +42,20 @@
 
     End Sub
     Public Sub tampilPembelian()
-        Me.GridPembelianTableAdapter.FillByKode(Me.DbInventoryDataSet.GridPembelian, txtNo.Text)
-        Dim total = PembelianDetilTableAdapter.ScalarSumSubTotal(txtNo.Text)
-        Dim jitem = PembelianDetilTableAdapter.ScalarItem(txtNo.Text)
-        lbTotal.Text = "Total : " & Format(total, "Currency")
-        lbItem.Text = "Item : " & jitem
+        Try
+            Me.GridPembelianTableAdapter.FillByKode(Me.DbInventoryDataSet.GridPembelian, txtNo.Text)
+            total = PembelianDetilTableAdapter.ScalarSumSubTotal(txtNo.Text)
+            item = PembelianDetilTableAdapter.ScalarItem(txtNo.Text)
+            lbTotal.Text = "Total : " & Format(total, "Currency")
+            lbItem.Text = "Item : " & item
+        Catch ex As Exception
+
+        End Try
+       
     End Sub
 
     Private Sub FormPembelian_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        kode_otomatis()
         'TODO: This line of code loads data into the 'DbInventoryDataSet.PembelianDetil' table. You can move, or remove it, as needed.
         Me.PembelianDetilTableAdapter.Fill(Me.DbInventoryDataSet.PembelianDetil)
         'TODO: This line of code loads data into the 'DbInventoryDataSet.PembelianMaster' table. You can move, or remove it, as needed.
@@ -76,10 +84,10 @@
             txtNo.Text = dt.Rows(0).Item("idPembelianMaster")
             txtTgl.Text = dt.Rows(0).Item("tanggalBeli")
             IdSupplierComboBox.SelectedValue = dt.Rows(0).Item("idSupplier")
-            Dim total = PembelianDetilTableAdapter.ScalarSumSubTotal(txtNo.Text)
-            Dim jitem = PembelianDetilTableAdapter.ScalarItem(txtNo.Text)
+            total = PembelianDetilTableAdapter.ScalarSumSubTotal(txtNo.Text)
+            item = PembelianDetilTableAdapter.ScalarItem(txtNo.Text)
             lbTotal.Text = "Total : " & Format(total, "Currency")
-            lbItem.Text = "Item : " & jitem
+            lbItem.Text = "Item : " & item
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -95,5 +103,21 @@
         DialogPembelian.TextBox1.Text = GridBarangDataGridView.SelectedCells(8).Value
         DialogPembelian.lb.Text = GridBarangDataGridView.SelectedCells(1).Value
         DialogPembelian.ShowDialog()
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        PembelianDetilTableAdapter.DeleteQuery(GridBarangDataGridView.SelectedCells(1).Value)
+        tampilPembelian()
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Try
+            If MessageBox.Show("Anda yakin akan mengahpus pemesanan no " & txtNo.Text & " ?", "Pertanyaan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                PembelianMasterTableAdapter.DeleteQuery(txtNo.Text)
+                tampilPembelian()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

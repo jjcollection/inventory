@@ -95,6 +95,12 @@
     <Compile Include="FormPembelian.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTerimaBarang.Designer.vb">
+      <DependentUpon>FormTerimaBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTerimaBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MenuUtama.Designer.vb">
       <DependentUpon>MenuUtama.vb</DependentUpon>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPembelian.resx">
       <DependentUpon>FormPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTerimaBarang.resx">
+      <DependentUpon>FormTerimaBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>
@@ -345,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Lightning Bolt_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

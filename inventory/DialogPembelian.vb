@@ -6,10 +6,12 @@ Public Class DialogPembelian
         If lb.Text <> "" Then
             PembelianDetilTableAdapter.UpdateQuery(NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), lb.Text)
             FormPembelian.tampilPembelian()
+            PembelianMasterTableAdapter.UpdateItemTotal(FormPembelian.txtNo.Text, FormPembelian.item, FormPembelian.total, FormPembelian.txtNo.Text)
             lb.Text = ""
         Else
             PembelianDetilTableAdapter.InsertQuery(FormPembelian.txtNo.Text, NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), 0, "Sedang Dipesan")
             FormPembelian.tampilPembelian()
+            PembelianMasterTableAdapter.UpdateItemTotal(FormPembelian.txtNo.Text, FormPembelian.item, FormPembelian.total, FormPembelian.txtNo.Text)
             'Me.DialogResult = System.Windows.Forms.DialogResult.OK
             'Me.Close()
         End If
@@ -30,6 +32,8 @@ Public Class DialogPembelian
     End Sub
 
     Private Sub DialogPembelian_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DbInventoryDataSet.PembelianMaster' table. You can move, or remove it, as needed.
+        Me.PembelianMasterTableAdapter.Fill(Me.DbInventoryDataSet.PembelianMaster)
         'TODO: This line of code loads data into the 'DbInventoryDataSet.PembelianDetil' table. You can move, or remove it, as needed.
         Me.PembelianDetilTableAdapter.Fill(Me.DbInventoryDataSet.PembelianDetil)
         'TODO: This line of code loads data into the 'DbInventoryDataSet.Barang' table. You can move, or remove it, as needed.

@@ -23,8 +23,8 @@ Partial Class FormPembelian
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -41,6 +41,7 @@ Partial Class FormPembelian
         Me.lbItem = New System.Windows.Forms.Label()
         Me.lbTotal = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -220,6 +221,7 @@ Partial Class FormPembelian
         Me.Panel1.Controls.Add(Me.lbItem)
         Me.Panel1.Controls.Add(Me.lbTotal)
         Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
@@ -277,6 +279,24 @@ Partial Class FormPembelian
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button7.Image = Global.inventory.My.Resources.Resources.Trash_25px
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(359, 4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(123, 32)
+        Me.Button7.TabIndex = 4
+        Me.Button7.Text = "Hapus Semua"
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button7.UseVisualStyleBackColor = False
+        '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -289,9 +309,9 @@ Partial Class FormPembelian
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button4.Location = New System.Drawing.Point(241, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(81, 32)
+        Me.Button4.Size = New System.Drawing.Size(117, 32)
         Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Hapus"
+        Me.Button4.Text = "Hapus Item"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button4.UseVisualStyleBackColor = False
         '
@@ -435,10 +455,10 @@ Partial Class FormPembelian
         'HargaBeliDataGridViewTextBoxColumn
         '
         Me.HargaBeliDataGridViewTextBoxColumn.DataPropertyName = "hargaBeli"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.HargaBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "C2"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.HargaBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
         Me.HargaBeliDataGridViewTextBoxColumn.HeaderText = "Harga"
         Me.HargaBeliDataGridViewTextBoxColumn.Name = "HargaBeliDataGridViewTextBoxColumn"
         Me.HargaBeliDataGridViewTextBoxColumn.ReadOnly = True
@@ -446,10 +466,10 @@ Partial Class FormPembelian
         'SubTotalBeliDataGridViewTextBoxColumn
         '
         Me.SubTotalBeliDataGridViewTextBoxColumn.DataPropertyName = "subTotalBeli"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.SubTotalBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "C2"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.SubTotalBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
         Me.SubTotalBeliDataGridViewTextBoxColumn.HeaderText = "SubTotal"
         Me.SubTotalBeliDataGridViewTextBoxColumn.Name = "SubTotalBeliDataGridViewTextBoxColumn"
         Me.SubTotalBeliDataGridViewTextBoxColumn.ReadOnly = True
@@ -580,4 +600,5 @@ Partial Class FormPembelian
     Friend WithEvents JumlahBeliDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents HargaBeliDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SubTotalBeliDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button7 As System.Windows.Forms.Button
 End Class

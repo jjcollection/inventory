@@ -46,4 +46,15 @@
         TextBox1.Text = ""
         TextBox1.Focus()
     End Sub
+
+    Private Sub GridBarangDataGridView_CellEndEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles GridBarangDataGridView.CellEndEdit
+        If e.ColumnIndex = 5 Then
+            'Dim mEditRow As Integer = -1
+            'Dim NewRow As Integer = mEditRow
+            'mEditRow = -1
+            'PenjualanDetilDataGridView.CurrentCell = PenjualanDetilDataGridView.Rows(NewRow).Cells(PenjualanDetilDataGridView.CurrentCell.ColumnIndex)
+        ElseIf e.ColumnIndex = 6 Then
+            GridBarangDataGridView.Rows(e.RowIndex).Cells(7).Value = Val(GridBarangDataGridView.Rows(e.RowIndex).Cells(5).Value) * Val(GridBarangDataGridView.Rows(e.RowIndex).Cells(6).Value)
+        End If
+    End Sub
 End Class

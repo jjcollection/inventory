@@ -21,6 +21,16 @@
         End Try
 
     End Sub
+    Public Sub hitungsummary()
+        Dim qry0 = From theRow As DataGridViewRow In GridBarangDataGridView.Rows Select theRow
+        Dim sumBeli As Double
+        sumBeli = qry0.Sum(Function(x As DataGridViewRow) CDec(x.Cells(11).Value))
+        lbTotal.Text = Format(sumBeli, "Currency")
+    End Sub
+    Public Sub hitungItem()
+        item = GridBarangDataGridView.Rows.Count
+        lbitem.Text = "Item : " & Format(item, "0.###")
+    End Sub
     Public Sub tampilPembelian()
         Try
             Me.GridPembelianTableAdapter.FillByKode(Me.DbInventoryDataSet.GridPembelian, txtNo.Text)
@@ -53,8 +63,10 @@
             'Dim NewRow As Integer = mEditRow
             'mEditRow = -1
             'PenjualanDetilDataGridView.CurrentCell = PenjualanDetilDataGridView.Rows(NewRow).Cells(PenjualanDetilDataGridView.CurrentCell.ColumnIndex)
-        ElseIf e.ColumnIndex = 6 Then
-            GridBarangDataGridView.Rows(e.RowIndex).Cells(7).Value = Val(GridBarangDataGridView.Rows(e.RowIndex).Cells(5).Value) * Val(GridBarangDataGridView.Rows(e.RowIndex).Cells(6).Value)
+        ElseIf e.ColumnIndex = 10 Then
+            GridBarangDataGridView.Rows(e.RowIndex).Cells(11).Value = Val(GridBarangDataGridView.Rows(e.RowIndex).Cells(9).Value) * Val(GridBarangDataGridView.Rows(e.RowIndex).Cells(10).Value)
+            hitungItem()
+            hitungsummary()
         End If
     End Sub
 End Class

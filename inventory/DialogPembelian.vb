@@ -4,19 +4,24 @@ Public Class DialogPembelian
     Public lb As New Label
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         If lb.Text <> "" Then
-            PembelianDetilTableAdapter.UpdateQuery(NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), lb.Text)
+            PembelianDetilTableAdapter.UpdateQuery(NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), 0, "Sedang Dipesan", lb.Text)
             FormPembelian.tampilPembelian()
             PembelianMasterTableAdapter.UpdateItemTotal(FormPembelian.txtNo.Text, FormPembelian.item, FormPembelian.total, FormPembelian.txtNo.Text)
             lb.Text = ""
         Else
-            PembelianDetilTableAdapter.InsertQuery(FormPembelian.txtNo.Text, NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), 0, "Sedang Dipesan")
-            FormPembelian.tampilPembelian()
-            PembelianMasterTableAdapter.UpdateItemTotal(FormPembelian.txtNo.Text, FormPembelian.item, FormPembelian.total, FormPembelian.txtNo.Text)
-            'Me.DialogResult = System.Windows.Forms.DialogResult.OK
-            'Me.Close()
+            Dim cekbeli = PembelianDetilTableAdapter.cekJmlBeli(FormPembelian.txtNo.Text, NamaBarangComboBox.SelectedValue)
+            If cekbeli > 0 Then
+                PembelianDetilTableAdapter.UpdateJumlahBeli(NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), CDbl(HargaBeliLabel1.Text), NamaBarangComboBox.SelectedValue, FormPembelian.txtNo.Text)
+                FormPembelian.tampilPembelian()
+                PembelianMasterTableAdapter.UpdateItemTotal(FormPembelian.txtNo.Text, FormPembelian.item, FormPembelian.total, FormPembelian.txtNo.Text)
+            Else
+                PembelianDetilTableAdapter.InsertQuery(FormPembelian.txtNo.Text, NamaBarangComboBox.SelectedValue, TextBox1.Text, CDbl(HargaBeliLabel1.Text) * Val(TextBox1.Text), 0, "Sedang Dipesan")
+                FormPembelian.tampilPembelian()
+                PembelianMasterTableAdapter.UpdateItemTotal(FormPembelian.txtNo.Text, FormPembelian.item, FormPembelian.total, FormPembelian.txtNo.Text)
+                'Me.DialogResult = System.Windows.Forms.DialogResult.OK
+                'Me.Close()
+            End If
         End If
-       
-
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click

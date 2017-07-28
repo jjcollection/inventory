@@ -12,3 +12,7 @@ C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\invento
 C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.FormPembelian.resources
 C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.DialogPembelian.resources
 C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.FormTerimaBarang.resources
+C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.vbprojResolveAssemblyReference.cache
+C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.FormReportPemesanan.resources
+C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\RdlCompile.cache
+C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\RdlCompile.compiled

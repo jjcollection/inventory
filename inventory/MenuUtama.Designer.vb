@@ -56,6 +56,7 @@ Partial Class MenuUtama
         '
         'PictureBox3
         '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.inventory.My.Resources.Resources.Shutdown_16px
         Me.PictureBox3.Location = New System.Drawing.Point(9, 652)
         Me.PictureBox3.Name = "PictureBox3"
@@ -76,6 +77,7 @@ Partial Class MenuUtama
         '
         'PictureBox2
         '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = Global.inventory.My.Resources.Resources.Settings_16px
         Me.PictureBox2.Location = New System.Drawing.Point(9, 617)
         Me.PictureBox2.Name = "PictureBox2"

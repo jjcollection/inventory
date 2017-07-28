@@ -23,8 +23,8 @@ Partial Class FormPembelian
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -41,6 +41,7 @@ Partial Class FormPembelian
         Me.lbItem = New System.Windows.Forms.Label()
         Me.lbTotal = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -58,6 +59,7 @@ Partial Class FormPembelian
         Me.JumlahBeliDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HargaBeliDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubTotalBeliDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GridPembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.SupplierTableAdapter = New inventory.dbInventoryDataSetTableAdapters.SupplierTableAdapter()
@@ -221,6 +223,7 @@ Partial Class FormPembelian
         Me.Panel1.Controls.Add(Me.lbItem)
         Me.Panel1.Controls.Add(Me.lbTotal)
         Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -278,6 +281,24 @@ Partial Class FormPembelian
         Me.Button5.Text = "Keluar"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.Image = Global.inventory.My.Resources.Resources.Print_25px
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.Location = New System.Drawing.Point(483, 4)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(76, 32)
+        Me.Button8.TabIndex = 4
+        Me.Button8.Text = "Cetak"
+        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button7
         '
@@ -376,7 +397,7 @@ Partial Class FormPembelian
         Me.GridBarangDataGridView.AutoGenerateColumns = False
         Me.GridBarangDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.GridBarangDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridBarangDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPembelianMasterDataGridViewTextBoxColumn, Me.IdPembelianDetilDataGridViewTextBoxColumn, Me.kodeBarang, Me.NamaMerkDataGridViewTextBoxColumn, Me.NamaBarangDataGridViewTextBoxColumn, Me.NamaJenisDataGridViewTextBoxColumn, Me.UkuranDataGridViewTextBoxColumn, Me.StokDataGridViewTextBoxColumn, Me.JumlahBeliDataGridViewTextBoxColumn, Me.HargaBeliDataGridViewTextBoxColumn, Me.SubTotalBeliDataGridViewTextBoxColumn})
+        Me.GridBarangDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPembelianMasterDataGridViewTextBoxColumn, Me.IdPembelianDetilDataGridViewTextBoxColumn, Me.kodeBarang, Me.NamaMerkDataGridViewTextBoxColumn, Me.NamaBarangDataGridViewTextBoxColumn, Me.NamaJenisDataGridViewTextBoxColumn, Me.UkuranDataGridViewTextBoxColumn, Me.StokDataGridViewTextBoxColumn, Me.JumlahBeliDataGridViewTextBoxColumn, Me.HargaBeliDataGridViewTextBoxColumn, Me.SubTotalBeliDataGridViewTextBoxColumn, Me.status})
         Me.GridBarangDataGridView.DataSource = Me.GridPembelianBindingSource
         Me.GridBarangDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GridBarangDataGridView.Location = New System.Drawing.Point(0, 0)
@@ -444,6 +465,7 @@ Partial Class FormPembelian
         Me.StokDataGridViewTextBoxColumn.HeaderText = "Stok"
         Me.StokDataGridViewTextBoxColumn.Name = "StokDataGridViewTextBoxColumn"
         Me.StokDataGridViewTextBoxColumn.ReadOnly = True
+        Me.StokDataGridViewTextBoxColumn.Width = 80
         '
         'JumlahBeliDataGridViewTextBoxColumn
         '
@@ -451,14 +473,15 @@ Partial Class FormPembelian
         Me.JumlahBeliDataGridViewTextBoxColumn.HeaderText = "Jumlah"
         Me.JumlahBeliDataGridViewTextBoxColumn.Name = "JumlahBeliDataGridViewTextBoxColumn"
         Me.JumlahBeliDataGridViewTextBoxColumn.ReadOnly = True
+        Me.JumlahBeliDataGridViewTextBoxColumn.Width = 80
         '
         'HargaBeliDataGridViewTextBoxColumn
         '
         Me.HargaBeliDataGridViewTextBoxColumn.DataPropertyName = "hargaBeli"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.Format = "C2"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.HargaBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.HargaBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.HargaBeliDataGridViewTextBoxColumn.HeaderText = "Harga"
         Me.HargaBeliDataGridViewTextBoxColumn.Name = "HargaBeliDataGridViewTextBoxColumn"
         Me.HargaBeliDataGridViewTextBoxColumn.ReadOnly = True
@@ -466,13 +489,22 @@ Partial Class FormPembelian
         'SubTotalBeliDataGridViewTextBoxColumn
         '
         Me.SubTotalBeliDataGridViewTextBoxColumn.DataPropertyName = "subTotalBeli"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle6.Format = "C2"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.SubTotalBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.SubTotalBeliDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.SubTotalBeliDataGridViewTextBoxColumn.HeaderText = "SubTotal"
         Me.SubTotalBeliDataGridViewTextBoxColumn.Name = "SubTotalBeliDataGridViewTextBoxColumn"
         Me.SubTotalBeliDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SubTotalBeliDataGridViewTextBoxColumn.Width = 180
+        '
+        'status
+        '
+        Me.status.DataPropertyName = "status"
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        Me.status.Width = 180
         '
         'GridPembelianBindingSource
         '
@@ -589,6 +621,7 @@ Partial Class FormPembelian
     Friend WithEvents lbTotal As System.Windows.Forms.Label
     Friend WithEvents PembelianDetilBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PembelianDetilTableAdapter As inventory.dbInventoryDataSetTableAdapters.PembelianDetilTableAdapter
+    Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents IdPembelianMasterDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents IdPembelianDetilDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents kodeBarang As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -600,5 +633,6 @@ Partial Class FormPembelian
     Friend WithEvents JumlahBeliDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents HargaBeliDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SubTotalBeliDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents status As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

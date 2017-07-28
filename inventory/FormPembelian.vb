@@ -120,4 +120,12 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        FormReportPemesanan.ShowDialog()
+    End Sub
 End Class

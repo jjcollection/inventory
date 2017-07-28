@@ -23,9 +23,8 @@
     End Sub
     Public Sub hitungsummary()
         Dim qry0 = From theRow As DataGridViewRow In GridBarangDataGridView.Rows Select theRow
-        Dim sumBeli As Double
-        sumBeli = qry0.Sum(Function(x As DataGridViewRow) CDec(x.Cells(11).Value))
-        lbTotal.Text = Format(sumBeli, "Currency")
+        total = qry0.Sum(Function(x As DataGridViewRow) CDec(x.Cells(11).Value))
+        lbTotal.Text = Format(total, "Currency")
     End Sub
     Public Sub hitungItem()
         item = GridBarangDataGridView.Rows.Count
@@ -45,6 +44,12 @@
     End Sub
 
     Private Sub FormTerimaBarang_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DbInventoryDataSet.Pengaturan' table. You can move, or remove it, as needed.
+        Me.PengaturanTableAdapter.Fill(Me.DbInventoryDataSet.Pengaturan)
+        'TODO: This line of code loads data into the 'DbInventoryDataSet.Barang' table. You can move, or remove it, as needed.
+        Me.BarangTableAdapter.Fill(Me.DbInventoryDataSet.Barang)
+        'TODO: This line of code loads data into the 'DbInventoryDataSet.PembelianMaster' table. You can move, or remove it, as needed.
+        Me.PembelianMasterTableAdapter.Fill(Me.DbInventoryDataSet.PembelianMaster)
         'TODO: This line of code loads data into the 'DbInventoryDataSet.PembelianDetil' table. You can move, or remove it, as needed.
         Me.PembelianDetilTableAdapter.Fill(Me.DbInventoryDataSet.PembelianDetil)
         'TODO: This line of code loads data into the 'DbInventoryDataSet.GridPembelian' table. You can move, or remove it, as needed.
@@ -69,4 +74,21 @@
             hitungsummary()
         End If
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim atur = PengaturanTableAdapter.GetDataByKeuntungan
+        Dim persen As Double
+        persen = atur.Rows(0).Item("Keuntungan")
+        Try
+            For i As Integer = 0 To GridBarangDataGridView.Rows.Count - 1
+                PembelianDetilTableAdapter.UpdateQuery(GridBarangDataGridView.Rows(i).Cells(2).Value, Val(GridBarangDataGridView.Rows(i).Cells(9).Value), CDbl(GridBarangDataGridView.Rows(i).Cells(11).Value), CDbl(GridBarangDataGridView.Rows(i).Cells(10).Value), "Baik", Val(GridBarangDataGridView.Rows(i).Cells(1).Value))
+                BarangTableAdapter.UpdateJumlah(GridBarangDataGridView.Rows(i).Cells(2).Value, Val(GridBarangDataGridView.Rows(i).Cells(9).Value), CDbl(GridBarangDataGridView.Rows(i).Cells(10).Value), ((CDbl(persen) / 100) * CDbl(GridBarangDataGridView.Rows(i).Cells(10).Value)) + CDbl(GridBarangDataGridView.Rows(i).Cells(10).Value), GridBarangDataGridView.Rows(i).Cells(2).Value)
+            Next
+            PembelianMasterTableAdapter.UpdateTotalItemStatus(txtNo.Text, item, total, txtNo.Text)
+            MsgBox("Data telah disimpan.", MsgBoxStyle.Information, "Informasi")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
 End Class

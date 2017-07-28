@@ -98,6 +98,12 @@
     <Compile Include="FormPembelian.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormPengeluaran.Designer.vb">
+      <DependentUpon>FormPengeluaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPengeluaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormReportPemesanan.Designer.vb">
       <DependentUpon>FormReportPemesanan.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPembelian.resx">
       <DependentUpon>FormPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPengeluaran.resx">
+      <DependentUpon>FormPengeluaran.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportPemesanan.resx">
       <DependentUpon>FormReportPemesanan.vb</DependentUpon>

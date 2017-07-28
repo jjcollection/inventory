@@ -46,6 +46,18 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:inventory.dbInventoryDataSet.KaryawanDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PenjualanDetilDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PenjualanMasterDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:inventory.dbInventoryDataSet.BarangRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -86,6 +98,18 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:inventory.dbInventoryDataSet.KaryawanRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PenjualanDetilRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PenjualanMasterRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:inventory.dbInventoryDataSet.BarangRowChangeEvent">
 	<summary>
 Row event argument class
@@ -123,6 +147,18 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:inventory.dbInventoryDataSet.GridPembelianRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.KaryawanRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PenjualanDetilRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:inventory.dbInventoryDataSet.PenjualanMasterRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -167,6 +203,18 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:inventory.dbInventoryDataSetTableAdapters.GridPembelianTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.KaryawanTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.PenjualanDetilTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:inventory.dbInventoryDataSetTableAdapters.PenjualanMasterTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

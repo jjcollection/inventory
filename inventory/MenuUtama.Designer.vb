@@ -141,7 +141,7 @@ Partial Class MenuUtama
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 24)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "&Pembelian"
+        Me.Label2.Text = "Pe&mbelian"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label3
@@ -154,9 +154,9 @@ Partial Class MenuUtama
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label3.Location = New System.Drawing.Point(301, 4)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 24)
+        Me.Label3.Size = New System.Drawing.Size(97, 24)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "P&engeluaran"
+        Me.Label3.Text = "P&enjualan"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'MenuUtama

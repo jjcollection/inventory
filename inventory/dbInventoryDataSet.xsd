@@ -303,7 +303,7 @@ WHERE        (kodeBarang = ?)</CommandText>
               <Mapping SourceColumn="status" DataSetColumn="status" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="cekJmlBeli" Modifier="Public" Name="cekJmlBeli" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="cekJmlBeli">
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="cekJmlBeli" Modifier="Public" Name="cekJmlBeli" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="cekJmlBeli">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS jml
@@ -316,7 +316,7 @@ WHERE        (idPembelianMaster = ?) AND (kodeBarang = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM PembelianDetil
@@ -327,7 +327,7 @@ WHERE        (idPembelianDetil = ?)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO `PembelianDetil` (`idPembelianMaster`, `kodeBarang`, `jumlahBeli`, `subTotalBeli`, `hargaBeli`, `status`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
@@ -342,7 +342,7 @@ WHERE        (idPembelianDetil = ?)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarItem" Modifier="Public" Name="ScalarItem" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ScalarItem">
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarItem" Modifier="Public" Name="ScalarItem" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ScalarItem">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS item
@@ -354,7 +354,7 @@ WHERE        (idPembelianMaster = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarSumSubTotal" Modifier="Public" Name="ScalarSumSubTotal" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ScalarSumSubTotal">
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarSumSubTotal" Modifier="Public" Name="ScalarSumSubTotal" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ScalarSumSubTotal">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(subTotalBeli) AS jml
@@ -383,7 +383,7 @@ WHERE        (kodeBarang = ?) AND (idPembelianMaster = ?)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       PembelianDetil
@@ -626,7 +626,7 @@ WHERE        (idAturan = 1)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_jumlah" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_jumlah" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_penanggungJawab" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_penanggungJawab" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_penanggungJawab" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -637,7 +637,7 @@ WHERE        (idAturan = 1)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="jumlah" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="penanggungJawab" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="penanggungJawab" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -654,7 +654,7 @@ WHERE        (idAturan = 1)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="jumlah" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="penanggungJawab" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="penanggungJawab" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_idPengeluaran" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idPengeluaran" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_kodeBarang" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -663,7 +663,7 @@ WHERE        (idAturan = 1)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_jumlah" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_jumlah" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_penanggungJawab" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_penanggungJawab" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_penanggungJawab" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="penanggungJawab" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -823,6 +823,209 @@ ORDER BY Barang.namaBarang</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KaryawanTableAdapter" GeneratorDataComponentClassName="KaryawanTableAdapter" Name="Karyawan" UserDataComponentName="KaryawanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="Karyawan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Karyawan` WHERE ((`idKaryawan` = ?) AND ((? = 1 AND `namaKaryawan` IS NULL) OR (`namaKaryawan` = ?)) AND ((? = 1 AND `Telp` IS NULL) OR (`Telp` = ?)) AND ((? = 1 AND `alamat` IS NULL) OR (`alamat` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_idKaryawan" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idKaryawan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_namaKaryawan" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="namaKaryawan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_namaKaryawan" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="namaKaryawan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Telp" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Telp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Telp" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Telp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_alamat" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_alamat" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Karyawan` (`namaKaryawan`, `Telp`, `alamat`) VALUES (?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="namaKaryawan" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="namaKaryawan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Telp" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Telp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="alamat" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idKaryawan, namaKaryawan, Telp, alamat FROM Karyawan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Karyawan` SET `namaKaryawan` = ?, `Telp` = ?, `alamat` = ? WHERE ((`idKaryawan` = ?) AND ((? = 1 AND `namaKaryawan` IS NULL) OR (`namaKaryawan` = ?)) AND ((? = 1 AND `Telp` IS NULL) OR (`Telp` = ?)) AND ((? = 1 AND `alamat` IS NULL) OR (`alamat` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="namaKaryawan" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="namaKaryawan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Telp" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Telp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="alamat" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_idKaryawan" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idKaryawan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_namaKaryawan" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="namaKaryawan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_namaKaryawan" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="namaKaryawan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Telp" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Telp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Telp" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Telp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_alamat" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_alamat" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idKaryawan" DataSetColumn="idKaryawan" />
+              <Mapping SourceColumn="namaKaryawan" DataSetColumn="namaKaryawan" />
+              <Mapping SourceColumn="Telp" DataSetColumn="Telp" />
+              <Mapping SourceColumn="alamat" DataSetColumn="alamat" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PenjualanDetilTableAdapter" GeneratorDataComponentClassName="PenjualanDetilTableAdapter" Name="PenjualanDetil" UserDataComponentName="PenjualanDetilTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="PenjualanDetil" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `PenjualanDetil` WHERE ((`idPenjulanDetil` = ?) AND ((? = 1 AND `noTransaksi` IS NULL) OR (`noTransaksi` = ?)) AND ((? = 1 AND `kodeBarang` IS NULL) OR (`kodeBarang` = ?)) AND ((? = 1 AND `jumlahBeli` IS NULL) OR (`jumlahBeli` = ?)) AND ((? = 1 AND `subTotal` IS NULL) OR (`subTotal` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_idPenjulanDetil" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idPenjulanDetil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_noTransaksi" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_kodeBarang" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_jumlahBeli" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlahBeli" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_jumlahBeli" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlahBeli" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_subTotal" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="subTotal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_subTotal" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="subTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `PenjualanDetil` (`noTransaksi`, `kodeBarang`, `jumlahBeli`, `subTotal`) VALUES (?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="jumlahBeli" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlahBeli" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="subTotal" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="subTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idPenjulanDetil, noTransaksi, kodeBarang, jumlahBeli, subTotal FROM PenjualanDetil</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `PenjualanDetil` SET `noTransaksi` = ?, `kodeBarang` = ?, `jumlahBeli` = ?, `subTotal` = ? WHERE ((`idPenjulanDetil` = ?) AND ((? = 1 AND `noTransaksi` IS NULL) OR (`noTransaksi` = ?)) AND ((? = 1 AND `kodeBarang` IS NULL) OR (`kodeBarang` = ?)) AND ((? = 1 AND `jumlahBeli` IS NULL) OR (`jumlahBeli` = ?)) AND ((? = 1 AND `subTotal` IS NULL) OR (`subTotal` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="jumlahBeli" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlahBeli" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="subTotal" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="subTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_idPenjulanDetil" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="idPenjulanDetil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_noTransaksi" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_kodeBarang" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_kodeBarang" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="kodeBarang" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_jumlahBeli" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlahBeli" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_jumlahBeli" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jumlahBeli" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_subTotal" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="subTotal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_subTotal" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="subTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idPenjulanDetil" DataSetColumn="idPenjulanDetil" />
+              <Mapping SourceColumn="noTransaksi" DataSetColumn="noTransaksi" />
+              <Mapping SourceColumn="kodeBarang" DataSetColumn="kodeBarang" />
+              <Mapping SourceColumn="jumlahBeli" DataSetColumn="jumlahBeli" />
+              <Mapping SourceColumn="subTotal" DataSetColumn="subTotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PenjualanMasterTableAdapter" GeneratorDataComponentClassName="PenjualanMasterTableAdapter" Name="PenjualanMaster" UserDataComponentName="PenjualanMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbInventoryConnectionString (MySettings)" DbObjectName="PenjualanMaster" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `PenjualanMaster` WHERE ((`noTransaksi` = ?) AND ((? = 1 AND `tanggal` IS NULL) OR (`tanggal` = ?)) AND ((? = 1 AND `totalItem` IS NULL) OR (`totalItem` = ?)) AND ((? = 1 AND `totalBelanja` IS NULL) OR (`totalBelanja` = ?)) AND ((? = 1 AND `bayar` IS NULL) OR (`bayar` = ?)) AND ((? = 1 AND `kembali` IS NULL) OR (`kembali` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_tanggal" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_totalItem" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalItem" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_totalItem" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalItem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_totalBelanja" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalBelanja" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_totalBelanja" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalBelanja" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_bayar" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bayar" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_bayar" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="bayar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_kembali" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="kembali" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_kembali" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="kembali" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `PenjualanMaster` (`noTransaksi`, `tanggal`, `totalItem`, `totalBelanja`, `bayar`, `kembali`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="totalItem" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalItem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="totalBelanja" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalBelanja" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="bayar" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="bayar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="kembali" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="kembali" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT noTransaksi, tanggal, totalItem, totalBelanja, bayar, kembali FROM PenjualanMaster</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `PenjualanMaster` SET `noTransaksi` = ?, `tanggal` = ?, `totalItem` = ?, `totalBelanja` = ?, `bayar` = ?, `kembali` = ? WHERE ((`noTransaksi` = ?) AND ((? = 1 AND `tanggal` IS NULL) OR (`tanggal` = ?)) AND ((? = 1 AND `totalItem` IS NULL) OR (`totalItem` = ?)) AND ((? = 1 AND `totalBelanja` IS NULL) OR (`totalBelanja` = ?)) AND ((? = 1 AND `bayar` IS NULL) OR (`bayar` = ?)) AND ((? = 1 AND `kembali` IS NULL) OR (`kembali` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="totalItem" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalItem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="totalBelanja" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalBelanja" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="bayar" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="bayar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="kembali" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="kembali" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_noTransaksi" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="noTransaksi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_tanggal" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_totalItem" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalItem" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_totalItem" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalItem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_totalBelanja" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalBelanja" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_totalBelanja" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="totalBelanja" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_bayar" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bayar" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_bayar" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="bayar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_kembali" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="kembali" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_kembali" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="kembali" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="noTransaksi" DataSetColumn="noTransaksi" />
+              <Mapping SourceColumn="tanggal" DataSetColumn="tanggal" />
+              <Mapping SourceColumn="totalItem" DataSetColumn="totalItem" />
+              <Mapping SourceColumn="totalBelanja" DataSetColumn="totalBelanja" />
+              <Mapping SourceColumn="bayar" DataSetColumn="bayar" />
+              <Mapping SourceColumn="kembali" DataSetColumn="kembali" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -831,7 +1034,7 @@ ORDER BY Barang.namaBarang</CommandText>
   <xs:element name="dbInventoryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbInventoryDataSet" msprop:Generator_UserDSName="dbInventoryDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Barang" msprop:Generator_TableClassName="BarangDataTable" msprop:Generator_TableVarName="tableBarang" msprop:Generator_RowChangedName="BarangRowChanged" msprop:Generator_TablePropName="Barang" msprop:Generator_RowDeletingName="BarangRowDeleting" msprop:Generator_RowChangingName="BarangRowChanging" msprop:Generator_RowEvHandlerName="BarangRowChangeEventHandler" msprop:Generator_RowDeletedName="BarangRowDeleted" msprop:Generator_RowClassName="BarangRow" msprop:Generator_UserTableName="Barang" msprop:Generator_RowEvArgName="BarangRowChangeEvent">
+        <xs:element name="Barang" msprop:Generator_TableClassName="BarangDataTable" msprop:Generator_TableVarName="tableBarang" msprop:Generator_TablePropName="Barang" msprop:Generator_RowDeletingName="BarangRowDeleting" msprop:Generator_RowChangingName="BarangRowChanging" msprop:Generator_RowEvHandlerName="BarangRowChangeEventHandler" msprop:Generator_RowDeletedName="BarangRowDeleted" msprop:Generator_UserTableName="Barang" msprop:Generator_RowChangedName="BarangRowChanged" msprop:Generator_RowEvArgName="BarangRowChangeEvent" msprop:Generator_RowClassName="BarangRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="kodeBarang" msprop:Generator_ColumnVarNameInTable="columnkodeBarang" msprop:Generator_ColumnPropNameInRow="kodeBarang" msprop:Generator_ColumnPropNameInTable="kodeBarangColumn" msprop:Generator_UserColumnName="kodeBarang">
@@ -863,7 +1066,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Jenis" msprop:Generator_TableClassName="JenisDataTable" msprop:Generator_TableVarName="tableJenis" msprop:Generator_RowChangedName="JenisRowChanged" msprop:Generator_TablePropName="Jenis" msprop:Generator_RowDeletingName="JenisRowDeleting" msprop:Generator_RowChangingName="JenisRowChanging" msprop:Generator_RowEvHandlerName="JenisRowChangeEventHandler" msprop:Generator_RowDeletedName="JenisRowDeleted" msprop:Generator_RowClassName="JenisRow" msprop:Generator_UserTableName="Jenis" msprop:Generator_RowEvArgName="JenisRowChangeEvent">
+        <xs:element name="Jenis" msprop:Generator_TableClassName="JenisDataTable" msprop:Generator_TableVarName="tableJenis" msprop:Generator_TablePropName="Jenis" msprop:Generator_RowDeletingName="JenisRowDeleting" msprop:Generator_RowChangingName="JenisRowChanging" msprop:Generator_RowEvHandlerName="JenisRowChangeEventHandler" msprop:Generator_RowDeletedName="JenisRowDeleted" msprop:Generator_UserTableName="Jenis" msprop:Generator_RowChangedName="JenisRowChanged" msprop:Generator_RowEvArgName="JenisRowChangeEvent" msprop:Generator_RowClassName="JenisRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idJenis" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidJenis" msprop:Generator_ColumnPropNameInRow="idJenis" msprop:Generator_ColumnPropNameInTable="idJenisColumn" msprop:Generator_UserColumnName="idJenis" type="xs:int" />
@@ -877,7 +1080,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Merk" msprop:Generator_TableClassName="MerkDataTable" msprop:Generator_TableVarName="tableMerk" msprop:Generator_RowChangedName="MerkRowChanged" msprop:Generator_TablePropName="Merk" msprop:Generator_RowDeletingName="MerkRowDeleting" msprop:Generator_RowChangingName="MerkRowChanging" msprop:Generator_RowEvHandlerName="MerkRowChangeEventHandler" msprop:Generator_RowDeletedName="MerkRowDeleted" msprop:Generator_RowClassName="MerkRow" msprop:Generator_UserTableName="Merk" msprop:Generator_RowEvArgName="MerkRowChangeEvent">
+        <xs:element name="Merk" msprop:Generator_TableClassName="MerkDataTable" msprop:Generator_TableVarName="tableMerk" msprop:Generator_TablePropName="Merk" msprop:Generator_RowDeletingName="MerkRowDeleting" msprop:Generator_RowChangingName="MerkRowChanging" msprop:Generator_RowEvHandlerName="MerkRowChangeEventHandler" msprop:Generator_RowDeletedName="MerkRowDeleted" msprop:Generator_UserTableName="Merk" msprop:Generator_RowChangedName="MerkRowChanged" msprop:Generator_RowEvArgName="MerkRowChangeEvent" msprop:Generator_RowClassName="MerkRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idMerk" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidMerk" msprop:Generator_ColumnPropNameInRow="idMerk" msprop:Generator_ColumnPropNameInTable="idMerkColumn" msprop:Generator_UserColumnName="idMerk" type="xs:int" />
@@ -891,7 +1094,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PembelianDetil" msprop:Generator_TableClassName="PembelianDetilDataTable" msprop:Generator_TableVarName="tablePembelianDetil" msprop:Generator_RowChangedName="PembelianDetilRowChanged" msprop:Generator_TablePropName="PembelianDetil" msprop:Generator_RowDeletingName="PembelianDetilRowDeleting" msprop:Generator_RowChangingName="PembelianDetilRowChanging" msprop:Generator_RowEvHandlerName="PembelianDetilRowChangeEventHandler" msprop:Generator_RowDeletedName="PembelianDetilRowDeleted" msprop:Generator_RowClassName="PembelianDetilRow" msprop:Generator_UserTableName="PembelianDetil" msprop:Generator_RowEvArgName="PembelianDetilRowChangeEvent">
+        <xs:element name="PembelianDetil" msprop:Generator_TableClassName="PembelianDetilDataTable" msprop:Generator_TableVarName="tablePembelianDetil" msprop:Generator_TablePropName="PembelianDetil" msprop:Generator_RowDeletingName="PembelianDetilRowDeleting" msprop:Generator_RowChangingName="PembelianDetilRowChanging" msprop:Generator_RowEvHandlerName="PembelianDetilRowChangeEventHandler" msprop:Generator_RowDeletedName="PembelianDetilRowDeleted" msprop:Generator_UserTableName="PembelianDetil" msprop:Generator_RowChangedName="PembelianDetilRowChanged" msprop:Generator_RowEvArgName="PembelianDetilRowChangeEvent" msprop:Generator_RowClassName="PembelianDetilRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPembelianDetil" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPembelianDetil" msprop:Generator_ColumnPropNameInRow="idPembelianDetil" msprop:Generator_ColumnPropNameInTable="idPembelianDetilColumn" msprop:Generator_UserColumnName="idPembelianDetil" type="xs:int" />
@@ -922,7 +1125,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PembelianMaster" msprop:Generator_TableClassName="PembelianMasterDataTable" msprop:Generator_TableVarName="tablePembelianMaster" msprop:Generator_RowChangedName="PembelianMasterRowChanged" msprop:Generator_TablePropName="PembelianMaster" msprop:Generator_RowDeletingName="PembelianMasterRowDeleting" msprop:Generator_RowChangingName="PembelianMasterRowChanging" msprop:Generator_RowEvHandlerName="PembelianMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="PembelianMasterRowDeleted" msprop:Generator_RowClassName="PembelianMasterRow" msprop:Generator_UserTableName="PembelianMaster" msprop:Generator_RowEvArgName="PembelianMasterRowChangeEvent">
+        <xs:element name="PembelianMaster" msprop:Generator_TableClassName="PembelianMasterDataTable" msprop:Generator_TableVarName="tablePembelianMaster" msprop:Generator_TablePropName="PembelianMaster" msprop:Generator_RowDeletingName="PembelianMasterRowDeleting" msprop:Generator_RowChangingName="PembelianMasterRowChanging" msprop:Generator_RowEvHandlerName="PembelianMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="PembelianMasterRowDeleted" msprop:Generator_UserTableName="PembelianMaster" msprop:Generator_RowChangedName="PembelianMasterRowChanged" msprop:Generator_RowEvArgName="PembelianMasterRowChangeEvent" msprop:Generator_RowClassName="PembelianMasterRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPembelianMaster" msprop:Generator_ColumnVarNameInTable="columnidPembelianMaster" msprop:Generator_ColumnPropNameInRow="idPembelianMaster" msprop:Generator_ColumnPropNameInTable="idPembelianMasterColumn" msprop:Generator_UserColumnName="idPembelianMaster">
@@ -946,7 +1149,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Pengaturan" msprop:Generator_TableClassName="PengaturanDataTable" msprop:Generator_TableVarName="tablePengaturan" msprop:Generator_RowChangedName="PengaturanRowChanged" msprop:Generator_TablePropName="Pengaturan" msprop:Generator_RowDeletingName="PengaturanRowDeleting" msprop:Generator_RowChangingName="PengaturanRowChanging" msprop:Generator_RowEvHandlerName="PengaturanRowChangeEventHandler" msprop:Generator_RowDeletedName="PengaturanRowDeleted" msprop:Generator_RowClassName="PengaturanRow" msprop:Generator_UserTableName="Pengaturan" msprop:Generator_RowEvArgName="PengaturanRowChangeEvent">
+        <xs:element name="Pengaturan" msprop:Generator_TableClassName="PengaturanDataTable" msprop:Generator_TableVarName="tablePengaturan" msprop:Generator_TablePropName="Pengaturan" msprop:Generator_RowDeletingName="PengaturanRowDeleting" msprop:Generator_RowChangingName="PengaturanRowChanging" msprop:Generator_RowEvHandlerName="PengaturanRowChangeEventHandler" msprop:Generator_RowDeletedName="PengaturanRowDeleted" msprop:Generator_UserTableName="Pengaturan" msprop:Generator_RowChangedName="PengaturanRowChanged" msprop:Generator_RowEvArgName="PengaturanRowChangeEvent" msprop:Generator_RowClassName="PengaturanRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idAturan" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidAturan" msprop:Generator_ColumnPropNameInRow="idAturan" msprop:Generator_ColumnPropNameInTable="idAturanColumn" msprop:Generator_UserColumnName="idAturan" type="xs:int" />
@@ -954,7 +1157,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Pengeluaran" msprop:Generator_TableClassName="PengeluaranDataTable" msprop:Generator_TableVarName="tablePengeluaran" msprop:Generator_RowChangedName="PengeluaranRowChanged" msprop:Generator_TablePropName="Pengeluaran" msprop:Generator_RowDeletingName="PengeluaranRowDeleting" msprop:Generator_RowChangingName="PengeluaranRowChanging" msprop:Generator_RowEvHandlerName="PengeluaranRowChangeEventHandler" msprop:Generator_RowDeletedName="PengeluaranRowDeleted" msprop:Generator_RowClassName="PengeluaranRow" msprop:Generator_UserTableName="Pengeluaran" msprop:Generator_RowEvArgName="PengeluaranRowChangeEvent">
+        <xs:element name="Pengeluaran" msprop:Generator_TableClassName="PengeluaranDataTable" msprop:Generator_TableVarName="tablePengeluaran" msprop:Generator_TablePropName="Pengeluaran" msprop:Generator_RowDeletingName="PengeluaranRowDeleting" msprop:Generator_RowChangingName="PengeluaranRowChanging" msprop:Generator_RowEvHandlerName="PengeluaranRowChangeEventHandler" msprop:Generator_RowDeletedName="PengeluaranRowDeleted" msprop:Generator_UserTableName="Pengeluaran" msprop:Generator_RowChangedName="PengeluaranRowChanged" msprop:Generator_RowEvArgName="PengeluaranRowChangeEvent" msprop:Generator_RowClassName="PengeluaranRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPengeluaran" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPengeluaran" msprop:Generator_ColumnPropNameInRow="idPengeluaran" msprop:Generator_ColumnPropNameInTable="idPengeluaranColumn" msprop:Generator_UserColumnName="idPengeluaran" type="xs:int" />
@@ -973,17 +1176,11 @@ ORDER BY Barang.namaBarang</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="penanggungJawab" msprop:Generator_ColumnVarNameInTable="columnpenanggungJawab" msprop:Generator_ColumnPropNameInRow="penanggungJawab" msprop:Generator_ColumnPropNameInTable="penanggungJawabColumn" msprop:Generator_UserColumnName="penanggungJawab" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="penanggungJawab" msprop:Generator_ColumnVarNameInTable="columnpenanggungJawab" msprop:Generator_ColumnPropNameInRow="penanggungJawab" msprop:Generator_ColumnPropNameInTable="penanggungJawabColumn" msprop:Generator_UserColumnName="penanggungJawab" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Supplier" msprop:Generator_TableClassName="SupplierDataTable" msprop:Generator_TableVarName="tableSupplier" msprop:Generator_RowChangedName="SupplierRowChanged" msprop:Generator_TablePropName="Supplier" msprop:Generator_RowDeletingName="SupplierRowDeleting" msprop:Generator_RowChangingName="SupplierRowChanging" msprop:Generator_RowEvHandlerName="SupplierRowChangeEventHandler" msprop:Generator_RowDeletedName="SupplierRowDeleted" msprop:Generator_RowClassName="SupplierRow" msprop:Generator_UserTableName="Supplier" msprop:Generator_RowEvArgName="SupplierRowChangeEvent">
+        <xs:element name="Supplier" msprop:Generator_TableClassName="SupplierDataTable" msprop:Generator_TableVarName="tableSupplier" msprop:Generator_TablePropName="Supplier" msprop:Generator_RowDeletingName="SupplierRowDeleting" msprop:Generator_RowChangingName="SupplierRowChanging" msprop:Generator_RowEvHandlerName="SupplierRowChangeEventHandler" msprop:Generator_RowDeletedName="SupplierRowDeleted" msprop:Generator_UserTableName="Supplier" msprop:Generator_RowChangedName="SupplierRowChanged" msprop:Generator_RowEvArgName="SupplierRowChangeEvent" msprop:Generator_RowClassName="SupplierRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idSupplier" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidSupplier" msprop:Generator_ColumnPropNameInRow="idSupplier" msprop:Generator_ColumnPropNameInTable="idSupplierColumn" msprop:Generator_UserColumnName="idSupplier" type="xs:int" />
@@ -1011,7 +1208,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GridBarang" msprop:Generator_TableClassName="GridBarangDataTable" msprop:Generator_TableVarName="tableGridBarang" msprop:Generator_TablePropName="GridBarang" msprop:Generator_RowDeletingName="GridBarangRowDeleting" msprop:Generator_RowChangingName="GridBarangRowChanging" msprop:Generator_RowEvHandlerName="GridBarangRowChangeEventHandler" msprop:Generator_RowDeletedName="GridBarangRowDeleted" msprop:Generator_UserTableName="GridBarang" msprop:Generator_RowChangedName="GridBarangRowChanged" msprop:Generator_RowEvArgName="GridBarangRowChangeEvent" msprop:Generator_RowClassName="GridBarangRow">
+        <xs:element name="GridBarang" msprop:Generator_TableClassName="GridBarangDataTable" msprop:Generator_TableVarName="tableGridBarang" msprop:Generator_RowChangedName="GridBarangRowChanged" msprop:Generator_TablePropName="GridBarang" msprop:Generator_RowDeletingName="GridBarangRowDeleting" msprop:Generator_RowChangingName="GridBarangRowChanging" msprop:Generator_RowEvHandlerName="GridBarangRowChangeEventHandler" msprop:Generator_RowDeletedName="GridBarangRowDeleted" msprop:Generator_RowClassName="GridBarangRow" msprop:Generator_UserTableName="GridBarang" msprop:Generator_RowEvArgName="GridBarangRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="hargaJual" msprop:Generator_ColumnVarNameInTable="columnhargaJual" msprop:Generator_ColumnPropNameInRow="hargaJual" msprop:Generator_ColumnPropNameInTable="hargaJualColumn" msprop:Generator_UserColumnName="hargaJual" type="xs:decimal" minOccurs="0" />
@@ -1055,7 +1252,7 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GridPembelian" msprop:Generator_TableClassName="GridPembelianDataTable" msprop:Generator_TableVarName="tableGridPembelian" msprop:Generator_RowChangedName="GridPembelianRowChanged" msprop:Generator_TablePropName="GridPembelian" msprop:Generator_RowDeletingName="GridPembelianRowDeleting" msprop:Generator_RowChangingName="GridPembelianRowChanging" msprop:Generator_RowEvHandlerName="GridPembelianRowChangeEventHandler" msprop:Generator_RowDeletedName="GridPembelianRowDeleted" msprop:Generator_RowClassName="GridPembelianRow" msprop:Generator_UserTableName="GridPembelian" msprop:Generator_RowEvArgName="GridPembelianRowChangeEvent">
+        <xs:element name="GridPembelian" msprop:Generator_TableClassName="GridPembelianDataTable" msprop:Generator_TableVarName="tableGridPembelian" msprop:Generator_TablePropName="GridPembelian" msprop:Generator_RowDeletingName="GridPembelianRowDeleting" msprop:Generator_RowChangingName="GridPembelianRowChanging" msprop:Generator_RowEvHandlerName="GridPembelianRowChangeEventHandler" msprop:Generator_RowDeletedName="GridPembelianRowDeleted" msprop:Generator_UserTableName="GridPembelian" msprop:Generator_RowChangedName="GridPembelianRowChanged" msprop:Generator_RowEvArgName="GridPembelianRowChangeEvent" msprop:Generator_RowClassName="GridPembelianRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPembelianMaster" msprop:Generator_ColumnVarNameInTable="columnidPembelianMaster" msprop:Generator_ColumnPropNameInRow="idPembelianMaster" msprop:Generator_ColumnPropNameInTable="idPembelianMasterColumn" msprop:Generator_UserColumnName="idPembelianMaster" minOccurs="0">
@@ -1127,6 +1324,75 @@ ORDER BY Barang.namaBarang</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Karyawan" msprop:Generator_TableClassName="KaryawanDataTable" msprop:Generator_TableVarName="tableKaryawan" msprop:Generator_RowChangedName="KaryawanRowChanged" msprop:Generator_TablePropName="Karyawan" msprop:Generator_RowDeletingName="KaryawanRowDeleting" msprop:Generator_RowChangingName="KaryawanRowChanging" msprop:Generator_RowEvHandlerName="KaryawanRowChangeEventHandler" msprop:Generator_RowDeletedName="KaryawanRowDeleted" msprop:Generator_RowClassName="KaryawanRow" msprop:Generator_UserTableName="Karyawan" msprop:Generator_RowEvArgName="KaryawanRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idKaryawan" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidKaryawan" msprop:Generator_ColumnPropNameInRow="idKaryawan" msprop:Generator_ColumnPropNameInTable="idKaryawanColumn" msprop:Generator_UserColumnName="idKaryawan" type="xs:int" />
+              <xs:element name="namaKaryawan" msprop:Generator_ColumnVarNameInTable="columnnamaKaryawan" msprop:Generator_ColumnPropNameInRow="namaKaryawan" msprop:Generator_ColumnPropNameInTable="namaKaryawanColumn" msprop:Generator_UserColumnName="namaKaryawan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telp" msprop:Generator_ColumnVarNameInTable="columnTelp" msprop:Generator_ColumnPropNameInRow="Telp" msprop:Generator_ColumnPropNameInTable="TelpColumn" msprop:Generator_UserColumnName="Telp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PenjualanDetil" msprop:Generator_TableClassName="PenjualanDetilDataTable" msprop:Generator_TableVarName="tablePenjualanDetil" msprop:Generator_TablePropName="PenjualanDetil" msprop:Generator_RowDeletingName="PenjualanDetilRowDeleting" msprop:Generator_RowChangingName="PenjualanDetilRowChanging" msprop:Generator_RowEvHandlerName="PenjualanDetilRowChangeEventHandler" msprop:Generator_RowDeletedName="PenjualanDetilRowDeleted" msprop:Generator_UserTableName="PenjualanDetil" msprop:Generator_RowChangedName="PenjualanDetilRowChanged" msprop:Generator_RowEvArgName="PenjualanDetilRowChangeEvent" msprop:Generator_RowClassName="PenjualanDetilRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idPenjulanDetil" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPenjulanDetil" msprop:Generator_ColumnPropNameInRow="idPenjulanDetil" msprop:Generator_ColumnPropNameInTable="idPenjulanDetilColumn" msprop:Generator_UserColumnName="idPenjulanDetil" type="xs:int" />
+              <xs:element name="noTransaksi" msprop:Generator_ColumnVarNameInTable="columnnoTransaksi" msprop:Generator_ColumnPropNameInRow="noTransaksi" msprop:Generator_ColumnPropNameInTable="noTransaksiColumn" msprop:Generator_UserColumnName="noTransaksi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kodeBarang" msprop:Generator_ColumnVarNameInTable="columnkodeBarang" msprop:Generator_ColumnPropNameInRow="kodeBarang" msprop:Generator_ColumnPropNameInTable="kodeBarangColumn" msprop:Generator_UserColumnName="kodeBarang" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jumlahBeli" msprop:Generator_ColumnVarNameInTable="columnjumlahBeli" msprop:Generator_ColumnPropNameInRow="jumlahBeli" msprop:Generator_ColumnPropNameInTable="jumlahBeliColumn" msprop:Generator_UserColumnName="jumlahBeli" type="xs:int" minOccurs="0" />
+              <xs:element name="subTotal" msprop:Generator_ColumnVarNameInTable="columnsubTotal" msprop:Generator_ColumnPropNameInRow="subTotal" msprop:Generator_ColumnPropNameInTable="subTotalColumn" msprop:Generator_UserColumnName="subTotal" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PenjualanMaster" msprop:Generator_TableClassName="PenjualanMasterDataTable" msprop:Generator_TableVarName="tablePenjualanMaster" msprop:Generator_TablePropName="PenjualanMaster" msprop:Generator_RowDeletingName="PenjualanMasterRowDeleting" msprop:Generator_RowChangingName="PenjualanMasterRowChanging" msprop:Generator_RowEvHandlerName="PenjualanMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="PenjualanMasterRowDeleted" msprop:Generator_UserTableName="PenjualanMaster" msprop:Generator_RowChangedName="PenjualanMasterRowChanged" msprop:Generator_RowEvArgName="PenjualanMasterRowChangeEvent" msprop:Generator_RowClassName="PenjualanMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="noTransaksi" msprop:Generator_ColumnVarNameInTable="columnnoTransaksi" msprop:Generator_ColumnPropNameInRow="noTransaksi" msprop:Generator_ColumnPropNameInTable="noTransaksiColumn" msprop:Generator_UserColumnName="noTransaksi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="tanggal" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="tanggal" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="totalItem" msprop:Generator_ColumnVarNameInTable="columntotalItem" msprop:Generator_ColumnPropNameInRow="totalItem" msprop:Generator_ColumnPropNameInTable="totalItemColumn" msprop:Generator_UserColumnName="totalItem" type="xs:int" minOccurs="0" />
+              <xs:element name="totalBelanja" msprop:Generator_ColumnVarNameInTable="columntotalBelanja" msprop:Generator_ColumnPropNameInRow="totalBelanja" msprop:Generator_ColumnPropNameInTable="totalBelanjaColumn" msprop:Generator_UserColumnName="totalBelanja" type="xs:int" minOccurs="0" />
+              <xs:element name="bayar" msprop:Generator_ColumnVarNameInTable="columnbayar" msprop:Generator_ColumnPropNameInRow="bayar" msprop:Generator_ColumnPropNameInTable="bayarColumn" msprop:Generator_UserColumnName="bayar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="kembali" msprop:Generator_ColumnVarNameInTable="columnkembali" msprop:Generator_ColumnPropNameInRow="kembali" msprop:Generator_ColumnPropNameInTable="kembaliColumn" msprop:Generator_UserColumnName="kembali" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1161,19 +1427,34 @@ ORDER BY Barang.namaBarang</CommandText>
       <xs:selector xpath=".//mstns:Supplier" />
       <xs:field xpath="mstns:idSupplier" />
     </xs:unique>
+    <xs:unique name="Karyawan_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Karyawan" />
+      <xs:field xpath="mstns:idKaryawan" />
+    </xs:unique>
+    <xs:unique name="PenjualanDetil_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PenjualanDetil" />
+      <xs:field xpath="mstns:idPenjulanDetil" />
+    </xs:unique>
+    <xs:unique name="PenjualanMaster_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PenjualanMaster" />
+      <xs:field xpath="mstns:noTransaksi" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="JenisBarang" msdata:parent="Jenis" msdata:child="Barang" msdata:parentkey="idJenis" msdata:childkey="idJenis" msprop:Generator_UserChildTable="Barang" msprop:Generator_ChildPropName="GetBarangRows" msprop:Generator_UserRelationName="JenisBarang" msprop:Generator_ParentPropName="JenisRow" msprop:Generator_RelationVarName="relationJenisBarang" msprop:Generator_UserParentTable="Jenis" />
-      <msdata:Relationship name="MerkBarang" msdata:parent="Merk" msdata:child="Barang" msdata:parentkey="idMerk" msdata:childkey="idMerk" msprop:Generator_UserChildTable="Barang" msprop:Generator_ChildPropName="GetBarangRows" msprop:Generator_UserRelationName="MerkBarang" msprop:Generator_ParentPropName="MerkRow" msprop:Generator_RelationVarName="relationMerkBarang" msprop:Generator_UserParentTable="Merk" />
-      <msdata:Relationship name="BarangPembelianDetil" msdata:parent="Barang" msdata:child="PembelianDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="BarangPembelianDetil" msprop:Generator_RelationVarName="relationBarangPembelianDetil" msprop:Generator_UserParentTable="Barang" msprop:Generator_ParentPropName="BarangRow" />
-      <msdata:Relationship name="PembelianMasterPembelianDetil" msdata:parent="PembelianMaster" msdata:child="PembelianDetil" msdata:parentkey="idPembelianMaster" msdata:childkey="idPembelianMaster" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="PembelianMasterPembelianDetil" msprop:Generator_ParentPropName="PembelianMasterRow" msprop:Generator_RelationVarName="relationPembelianMasterPembelianDetil" msprop:Generator_UserParentTable="PembelianMaster" />
-      <msdata:Relationship name="SupplierPembelianMaster" msdata:parent="Supplier" msdata:child="PembelianMaster" msdata:parentkey="idSupplier" msdata:childkey="idSupplier" msprop:Generator_UserChildTable="PembelianMaster" msprop:Generator_ChildPropName="GetPembelianMasterRows" msprop:Generator_UserRelationName="SupplierPembelianMaster" msprop:Generator_ParentPropName="SupplierRow" msprop:Generator_RelationVarName="relationSupplierPembelianMaster" msprop:Generator_UserParentTable="Supplier" />
-      <msdata:Relationship name="BarangPengeluaran" msdata:parent="Barang" msdata:child="Pengeluaran" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="BarangPengeluaran" msprop:Generator_RelationVarName="relationBarangPengeluaran" msprop:Generator_UserParentTable="Barang" msprop:Generator_ParentPropName="BarangRow" />
-      <msdata:Relationship name="BarangPembelianDetil1" msdata:parent="GridBarang" msdata:child="PembelianDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="BarangPembelianDetil1" msprop:Generator_RelationVarName="relationBarangPembelianDetil1" msprop:Generator_UserParentTable="GridBarang" msprop:Generator_ParentPropName="GridBarangRow" />
-      <msdata:Relationship name="BarangPengeluaran1" msdata:parent="GridBarang" msdata:child="Pengeluaran" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="BarangPengeluaran1" msprop:Generator_RelationVarName="relationBarangPengeluaran1" msprop:Generator_UserParentTable="GridBarang" msprop:Generator_ParentPropName="GridBarangRow" />
-      <msdata:Relationship name="BarangPembelianDetil2" msdata:parent="GridPembelian" msdata:child="PembelianDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="BarangPembelianDetil2" msprop:Generator_ParentPropName="GridPembelianRow" msprop:Generator_RelationVarName="relationBarangPembelianDetil2" msprop:Generator_UserParentTable="GridPembelian" />
-      <msdata:Relationship name="BarangPengeluaran2" msdata:parent="GridPembelian" msdata:child="Pengeluaran" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="BarangPengeluaran2" msprop:Generator_ParentPropName="GridPembelianRow" msprop:Generator_RelationVarName="relationBarangPengeluaran2" msprop:Generator_UserParentTable="GridPembelian" />
+      <msdata:Relationship name="JenisBarang" msdata:parent="Jenis" msdata:child="Barang" msdata:parentkey="idJenis" msdata:childkey="idJenis" msprop:Generator_UserChildTable="Barang" msprop:Generator_ChildPropName="GetBarangRows" msprop:Generator_UserRelationName="JenisBarang" msprop:Generator_RelationVarName="relationJenisBarang" msprop:Generator_UserParentTable="Jenis" msprop:Generator_ParentPropName="JenisRow" />
+      <msdata:Relationship name="MerkBarang" msdata:parent="Merk" msdata:child="Barang" msdata:parentkey="idMerk" msdata:childkey="idMerk" msprop:Generator_UserChildTable="Barang" msprop:Generator_ChildPropName="GetBarangRows" msprop:Generator_UserRelationName="MerkBarang" msprop:Generator_RelationVarName="relationMerkBarang" msprop:Generator_UserParentTable="Merk" msprop:Generator_ParentPropName="MerkRow" />
+      <msdata:Relationship name="BarangPembelianDetil" msdata:parent="Barang" msdata:child="PembelianDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="BarangPembelianDetil" msprop:Generator_ParentPropName="BarangRow" msprop:Generator_RelationVarName="relationBarangPembelianDetil" msprop:Generator_UserParentTable="Barang" />
+      <msdata:Relationship name="PembelianMasterPembelianDetil" msdata:parent="PembelianMaster" msdata:child="PembelianDetil" msdata:parentkey="idPembelianMaster" msdata:childkey="idPembelianMaster" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="PembelianMasterPembelianDetil" msprop:Generator_RelationVarName="relationPembelianMasterPembelianDetil" msprop:Generator_UserParentTable="PembelianMaster" msprop:Generator_ParentPropName="PembelianMasterRow" />
+      <msdata:Relationship name="SupplierPembelianMaster" msdata:parent="Supplier" msdata:child="PembelianMaster" msdata:parentkey="idSupplier" msdata:childkey="idSupplier" msprop:Generator_UserChildTable="PembelianMaster" msprop:Generator_ChildPropName="GetPembelianMasterRows" msprop:Generator_UserRelationName="SupplierPembelianMaster" msprop:Generator_RelationVarName="relationSupplierPembelianMaster" msprop:Generator_UserParentTable="Supplier" msprop:Generator_ParentPropName="SupplierRow" />
+      <msdata:Relationship name="BarangPengeluaran" msdata:parent="Barang" msdata:child="Pengeluaran" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="BarangPengeluaran" msprop:Generator_ParentPropName="BarangRow" msprop:Generator_RelationVarName="relationBarangPengeluaran" msprop:Generator_UserParentTable="Barang" />
+      <msdata:Relationship name="BarangPembelianDetil1" msdata:parent="GridBarang" msdata:child="PembelianDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="BarangPembelianDetil1" msprop:Generator_ParentPropName="GridBarangRow" msprop:Generator_RelationVarName="relationBarangPembelianDetil1" msprop:Generator_UserParentTable="GridBarang" />
+      <msdata:Relationship name="BarangPengeluaran1" msdata:parent="GridBarang" msdata:child="Pengeluaran" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="BarangPengeluaran1" msprop:Generator_ParentPropName="GridBarangRow" msprop:Generator_RelationVarName="relationBarangPengeluaran1" msprop:Generator_UserParentTable="GridBarang" />
+      <msdata:Relationship name="BarangPembelianDetil2" msdata:parent="GridPembelian" msdata:child="PembelianDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PembelianDetil" msprop:Generator_ChildPropName="GetPembelianDetilRows" msprop:Generator_UserRelationName="BarangPembelianDetil2" msprop:Generator_RelationVarName="relationBarangPembelianDetil2" msprop:Generator_UserParentTable="GridPembelian" msprop:Generator_ParentPropName="GridPembelianRow" />
+      <msdata:Relationship name="BarangPengeluaran2" msdata:parent="GridPembelian" msdata:child="Pengeluaran" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="BarangPengeluaran2" msprop:Generator_RelationVarName="relationBarangPengeluaran2" msprop:Generator_UserParentTable="GridPembelian" msprop:Generator_ParentPropName="GridPembelianRow" />
+      <msdata:Relationship name="KaryawanPengeluaran" msdata:parent="Karyawan" msdata:child="Pengeluaran" msdata:parentkey="idKaryawan" msdata:childkey="penanggungJawab" msprop:Generator_UserChildTable="Pengeluaran" msprop:Generator_ChildPropName="GetPengeluaranRows" msprop:Generator_UserRelationName="KaryawanPengeluaran" msprop:Generator_ParentPropName="KaryawanRow" msprop:Generator_RelationVarName="relationKaryawanPengeluaran" msprop:Generator_UserParentTable="Karyawan" />
+      <msdata:Relationship name="BarangPenjualanDetil" msdata:parent="Barang" msdata:child="PenjualanDetil" msdata:parentkey="kodeBarang" msdata:childkey="kodeBarang" msprop:Generator_UserChildTable="PenjualanDetil" msprop:Generator_ChildPropName="GetPenjualanDetilRows" msprop:Generator_UserRelationName="BarangPenjualanDetil" msprop:Generator_ParentPropName="BarangRow" msprop:Generator_RelationVarName="relationBarangPenjualanDetil" msprop:Generator_UserParentTable="Barang" />
+      <msdata:Relationship name="PenjualanMasterPenjualanDetil" msdata:parent="PenjualanMaster" msdata:child="PenjualanDetil" msdata:parentkey="noTransaksi" msdata:childkey="noTransaksi" msprop:Generator_UserChildTable="PenjualanDetil" msprop:Generator_ChildPropName="GetPenjualanDetilRows" msprop:Generator_UserRelationName="PenjualanMasterPenjualanDetil" msprop:Generator_RelationVarName="relationPenjualanMasterPenjualanDetil" msprop:Generator_UserParentTable="PenjualanMaster" msprop:Generator_ParentPropName="PenjualanMasterRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

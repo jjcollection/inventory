@@ -242,11 +242,14 @@ Partial Class DialogPembelian
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BarangTableAdapter = Me.BarangTableAdapter
         Me.TableAdapterManager.JenisTableAdapter = Nothing
+        Me.TableAdapterManager.KaryawanTableAdapter = Nothing
         Me.TableAdapterManager.MerkTableAdapter = Nothing
         Me.TableAdapterManager.PembelianDetilTableAdapter = Nothing
         Me.TableAdapterManager.PembelianMasterTableAdapter = Nothing
         Me.TableAdapterManager.PengaturanTableAdapter = Nothing
         Me.TableAdapterManager.PengeluaranTableAdapter = Nothing
+        Me.TableAdapterManager.PenjualanDetilTableAdapter = Nothing
+        Me.TableAdapterManager.PenjualanMasterTableAdapter = Nothing
         Me.TableAdapterManager.SupplierTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = inventory.dbInventoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -281,7 +284,7 @@ Partial Class DialogPembelian
         '
         'HargaBeliLabel1
         '
-        Me.HargaBeliLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BarangBindingSource, "hargaBeli", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
+        Me.HargaBeliLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BarangBindingSource, "hargaJual", True))
         Me.HargaBeliLabel1.Location = New System.Drawing.Point(120, 76)
         Me.HargaBeliLabel1.Name = "HargaBeliLabel1"
         Me.HargaBeliLabel1.Size = New System.Drawing.Size(100, 23)

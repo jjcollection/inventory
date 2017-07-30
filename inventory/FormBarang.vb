@@ -37,4 +37,25 @@
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Me.Close()
     End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+            Try
+                BarangTableAdapter.UpdateQuery(KodeBarangTextBox.Text, IdMerkComboBox.SelectedValue, UkuranTextBox.Text, 0, 0, HargaJualTextBox.Text, IdJenisComboBox.SelectedValue, IdJenisComboBox.Text & "#" & IdMerkComboBox.Text & "#" & UkuranTextBox.Text, KodeBarangTextBox.Text)
+                MsgBox("data telah dihapus", MsgBoxStyle.Information, "Informasi")
+                Me.GridBarangTableAdapter.Fill(Me.DbInventoryDataSet.GridBarang)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Try
+            BarangTableAdapter.DeleteQuery(KodeBarangTextBox.Text)
+            MsgBox("data telah dihapus", MsgBoxStyle.Information, "Informasi")
+            Me.GridBarangTableAdapter.Fill(Me.DbInventoryDataSet.GridBarang)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

@@ -30,8 +30,39 @@
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
+    Public Sub tampilbrg(ByVal kodebarang As String, ByVal jumlah As String)
+        Dim dt = BarangTableAdapter.GetDataByKode(kodebarang)
+        Dim br = BarangTableAdapter.FillByKode(DbInventoryDataSet.Barang, kodebarang)
+        If dt.Rows.Count = 0 Then
+            MsgBox("Barang tidak ditemukan", MsgBoxStyle.Information, "Informasi")
+        Else
+            kodebr = dt.Rows(0).Item("namaBarang")
+            hargabr = dt.Rows(0).Item("hargaJual")
+            LabelInfo.Text = dt.Rows(0).Item("namaBarang") & "#" & Format(hargabr, "currency")
+            JumlahBeliTextBox.Focus()
+            Dim brj = BarangTableAdapter.GetDataByKode(kodebarang)
+            Dim jmlstok = brj.Rows(0).Item("stok")
+            If (Val(jmlstok) < Val(JumlahBeliTextBox.Text)) Then
+                MsgBox("Stok tidak cukup")
+            Else
+                PenjualanDetilTableAdapter.InsertQuery(NoTransaksiTextBox.Text, kodebarang.ToUpper, jumlah, Val(jumlah) * hargabr)
+                GridPenjualanTableAdapter.FillByTransaksi(DbInventoryDataSet.GridPenjualan, NoTransaksiTextBox.Text)
 
-    Private Sub btnTransaksiBaru_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+                Dim totalbelanja = PenjualanDetilTableAdapter.subtotal(NoTransaksiTextBox.Text)
+                Dim totalItem = PenjualanDetilTableAdapter.totalitem(NoTransaksiTextBox.Text)
+
+                lbTotal.Text = Format(totalbelanja, "Currency")
+                lbitem.Text = "Item :" & totalItem
+                lbTanggal.Text = Date.Today.Date
+                PenjualanMasterTableAdapter.UpdateTotal(NoTransaksiTextBox.Text, totalItem, totalbelanja, NoTransaksiTextBox.Text)
+                BarangTableAdapter.UpdateKurangiStok(kodebarang, jumlah, kodebarang)
+                ' KodeBarangTextBox.Focus()
+                KodeBarangTextBox.Text = ""
+                JumlahBeliTextBox.Text = "1"
+                btnenable()
+            End If
+        End If
+
 
     End Sub
 
@@ -221,4 +252,14 @@
         DialogBayar.ShowDialog()
     End Sub
 
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        DialogPembelian.OK_Button.BackColor = Color.Teal
+        DialogPembelian.Cancel_Button.BackColor = Color.Teal
+        DialogPembelian.ShowDialog()
+    End Sub
+
+    Private Sub btnHapus_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnHapus.Click
+        PenjualanMasterTableAdapter.DeleteQuery(NoTransaksiTextBox.Text)
+        Button8.PerformClick()
+    End Sub
 End Class

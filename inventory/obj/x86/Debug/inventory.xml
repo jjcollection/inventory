@@ -275,6 +275,10 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:inventory.My.Resources.Resources.Add_Shopping_Cart_25px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:inventory.My.Resources.Resources.Add_Shopping_Cart_64px">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

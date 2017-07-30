@@ -64,6 +64,7 @@ Partial Class FormJual
         Me.Button5 = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnBayar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GridPenjualanDataGridView = New System.Windows.Forms.DataGridView()
@@ -384,6 +385,7 @@ Partial Class FormJual
         Me.Panel3.Controls.Add(Me.Button5)
         Me.Panel3.Controls.Add(Me.btnHapus)
         Me.Panel3.Controls.Add(Me.btnBayar)
+        Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.Button8)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 691)
@@ -466,7 +468,7 @@ Partial Class FormJual
         Me.btnHapus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnHapus.Image = Global.inventory.My.Resources.Resources.Eraser_25px
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(166, 4)
+        Me.btnHapus.Location = New System.Drawing.Point(249, 4)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(81, 32)
         Me.btnHapus.TabIndex = 4
@@ -484,13 +486,31 @@ Partial Class FormJual
         Me.btnBayar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBayar.Image = Global.inventory.My.Resources.Resources.Edit_25px
         Me.btnBayar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBayar.Location = New System.Drawing.Point(91, 4)
+        Me.btnBayar.Location = New System.Drawing.Point(172, 4)
         Me.btnBayar.Name = "btnBayar"
         Me.btnBayar.Size = New System.Drawing.Size(75, 32)
         Me.btnBayar.TabIndex = 3
-        Me.btnBayar.Text = "Ubah"
+        Me.btnBayar.Text = "Bayar"
         Me.btnBayar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBayar.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.Image = Global.inventory.My.Resources.Resources.Add_Shopping_Cart_25px
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(82, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(88, 32)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Tambah"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button8
         '
@@ -504,9 +524,9 @@ Partial Class FormJual
         Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button8.Location = New System.Drawing.Point(3, 4)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(88, 32)
+        Me.Button8.Size = New System.Drawing.Size(77, 32)
         Me.Button8.TabIndex = 1
-        Me.Button8.Text = "Tambah"
+        Me.Button8.Text = "Baru"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button8.UseVisualStyleBackColor = False
         '
@@ -540,6 +560,7 @@ Partial Class FormJual
         Me.DataGridViewTextBoxColumn7.HeaderText = "idPenjulanDetil"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
         '
         'DataGridViewTextBoxColumn1
         '
@@ -547,6 +568,7 @@ Partial Class FormJual
         Me.DataGridViewTextBoxColumn1.HeaderText = "noTransaksi"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
         '
         'DataGridViewTextBoxColumn2
         '
@@ -558,9 +580,10 @@ Partial Class FormJual
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "namaBarang"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "namaBarang"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Nama Barang"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Width = 300
         '
         'DataGridViewTextBoxColumn3
         '
@@ -666,6 +689,7 @@ Partial Class FormJual
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents GridPenjualanDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn

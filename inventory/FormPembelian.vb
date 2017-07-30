@@ -73,6 +73,8 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        DialogPembelian.OK_Button.BackColor = Color.Maroon
+        DialogPembelian.Cancel_Button.BackColor = Color.Maroon
         DialogPembelian.ShowDialog()
     End Sub
 

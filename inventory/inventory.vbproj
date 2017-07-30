@@ -80,6 +80,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbInventoryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbInventoryDataSet.vb">
+      <DependentUpon>dbInventoryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DialogBayar.Designer.vb">
       <DependentUpon>DialogBayar.vb</DependentUpon>
     </Compile>
@@ -126,6 +129,12 @@
       <DependentUpon>FormReportPemesanan.vb</DependentUpon>
     </Compile>
     <Compile Include="FormReportPemesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportPenjualan.Designer.vb">
+      <DependentUpon>FormReportPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTerimaBarang.Designer.vb">
@@ -181,6 +190,9 @@
     <EmbeddedResource Include="FormReportPemesanan.resx">
       <DependentUpon>FormReportPemesanan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportPenjualan.resx">
+      <DependentUpon>FormReportPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTerimaBarang.resx">
       <DependentUpon>FormTerimaBarang.vb</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +206,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPemesanan.rdlc" />
+    <EmbeddedResource Include="ReportPenjualan.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -412,6 +425,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add Shopping Cart_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pie Chart_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14797,13 +14797,13 @@ Namespace dbInventoryDataSetTableAdapters
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_noTransaksi", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "noTransaksi", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._commandCollection(6) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "UPDATE       PembelianMaster"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                idPembelianMaster = ?, totalItem"& _ 
-                " = ?, totalBeli = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idPembelianMaster = ?)"
+            Me._commandCollection(6).CommandText = "UPDATE       PenjualanMaster"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                noTransaksi = ?, totalItem = ?, "& _ 
+                "totalBelanja = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (noTransaksi = ?)"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("idPembelianMaster", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idPembelianMaster", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("noTransaksi", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "noTransaksi", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totalItem", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totalItem", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totalBeli", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19,Byte), CType(0,Byte), "totalBeli", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_idPembelianMaster", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idPembelianMaster", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totalBelanja", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totalBelanja", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_noTransaksi", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "noTransaksi", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15237,27 +15237,27 @@ Namespace dbInventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function UpdateTotal(ByVal idPembelianMaster As String, ByVal totalItem As Global.System.Nullable(Of Integer), ByVal totalBeli As Global.System.Nullable(Of Decimal), ByVal Original_idPembelianMaster As String) As Integer
+        Public Overloads Overridable Function UpdateTotal(ByVal noTransaksi As String, ByVal totalItem As Global.System.Nullable(Of Integer), ByVal totalBelanja As Global.System.Nullable(Of Integer), ByVal Original_noTransaksi As String) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(6)
-            If (idPembelianMaster Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("idPembelianMaster")
+            If (noTransaksi Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("noTransaksi")
             Else
-                command.Parameters(0).Value = CType(idPembelianMaster,String)
+                command.Parameters(0).Value = CType(noTransaksi,String)
             End If
             If (totalItem.HasValue = true) Then
                 command.Parameters(1).Value = CType(totalItem.Value,Integer)
             Else
                 command.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            If (totalBeli.HasValue = true) Then
-                command.Parameters(2).Value = CType(totalBeli.Value,Decimal)
+            If (totalBelanja.HasValue = true) Then
+                command.Parameters(2).Value = CType(totalBelanja.Value,Integer)
             Else
                 command.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            If (Original_idPembelianMaster Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_idPembelianMaster")
+            If (Original_noTransaksi Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_noTransaksi")
             Else
-                command.Parameters(3).Value = CType(Original_idPembelianMaster,String)
+                command.Parameters(3).Value = CType(Original_noTransaksi,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _

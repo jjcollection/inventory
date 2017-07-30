@@ -54,10 +54,11 @@
                 lbTotal.Text = Format(totalbelanja, "Currency")
                 lbitem.Text = "Item :" & totalItem
                 lbTanggal.Text = Date.Today.Date
-                PenjualanMasterTableAdapter.UpdateTotal(NoTransaksiTextBox.Text, totalItem, totalbelanja, NoTransaksiTextBox.Text)
+                PenjualanMasterTableAdapter.UpdateTotal(NoTransaksiTextBox.Text, CInt(totalItem), CDbl(totalbelanja), NoTransaksiTextBox.Text)
                 BarangTableAdapter.UpdateKurangiStok(kodebarang, jumlah, kodebarang)
                 ' KodeBarangTextBox.Focus()
                 KodeBarangTextBox.Text = ""
+
                 JumlahBeliTextBox.Text = "1"
                 btnenable()
             End If
@@ -230,7 +231,6 @@
    
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         Try
-
             kode_otomatis()
             PenjualanMasterTableAdapter.InsertQuery(NoTransaksiTextBox.Text, Date.Now, 0, 0, 0, 0)
             GridPenjualanTableAdapter.FillByTransaksi(DbInventoryDataSet.GridPenjualan, NoTransaksiTextBox.Text)

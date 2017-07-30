@@ -113,4 +113,8 @@ Public Class MenuUtama
         FormJual.WindowState = FormWindowState.Maximized
         FormJual.Show()
     End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+        FormReportPenjualan.ShowDialog()
+    End Sub
 End Class

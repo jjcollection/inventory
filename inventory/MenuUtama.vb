@@ -109,8 +109,8 @@ Public Class MenuUtama
     End Sub
 
     Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
-        FormPengeluaran.MdiParent = Me
-        FormPengeluaran.WindowState = FormWindowState.Maximized
-        FormPengeluaran.Show()
+        FormJual.MdiParent = Me
+        FormJual.WindowState = FormWindowState.Maximized
+        FormJual.Show()
     End Sub
 End Class

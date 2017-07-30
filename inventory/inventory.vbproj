@@ -80,16 +80,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbInventoryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DialogBayar.Designer.vb">
+      <DependentUpon>DialogBayar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBayar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DialogPembelian.Designer.vb">
       <DependentUpon>DialogPembelian.vb</DependentUpon>
     </Compile>
     <Compile Include="DialogPembelian.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DialogPenjualan.Designer.vb">
+      <DependentUpon>DialogPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormBarang.Designer.vb">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </Compile>
     <Compile Include="FormBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJual.Designer.vb">
+      <DependentUpon>FormJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormJual.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPembelian.Designer.vb">
@@ -139,11 +157,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DialogBayar.resx">
+      <DependentUpon>DialogBayar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DialogPembelian.resx">
       <DependentUpon>DialogPembelian.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DialogPenjualan.resx">
+      <DependentUpon>DialogPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJual.resx">
+      <DependentUpon>FormJual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPembelian.resx">
       <DependentUpon>FormPembelian.vb</DependentUpon>

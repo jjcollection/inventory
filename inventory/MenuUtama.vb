@@ -117,4 +117,8 @@ Public Class MenuUtama
     Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
         FormReportPenjualan.ShowDialog()
     End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
+        FormReportPembelian.ShowDialog()
+    End Sub
 End Class

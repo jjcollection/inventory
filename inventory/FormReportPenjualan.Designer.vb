@@ -66,6 +66,7 @@ Partial Class FormReportPenjualan
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormReportPenjualan"
         Me.Text = "FormReportPenjualan"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.GridPenjualanBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dbInventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

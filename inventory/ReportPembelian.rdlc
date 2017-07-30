@@ -6,59 +6,83 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a8c2ad35-fc54-4cfe-afe4-d1084be9cc12</rd:DataSourceID>
+      <rd:DataSourceID>cfb713d9-1386-4059-8f19-a8cb35adeddc</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetPenjualan">
+    <DataSet Name="DataSetPembelian">
       <Fields>
-        <Field Name="noTransaksi">
-          <DataField>noTransaksi</DataField>
+        <Field Name="idPembelianMaster">
+          <DataField>idPembelianMaster</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="kodeBarang">
-          <DataField>kodeBarang</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="jumlahBeli">
-          <DataField>jumlahBeli</DataField>
+        <Field Name="idSupplier">
+          <DataField>idSupplier</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="subTotal">
-          <DataField>subTotal</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="namaBarang">
-          <DataField>namaBarang</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="hargaJual">
-          <DataField>hargaJual</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="idPenjulanDetil">
-          <DataField>idPenjulanDetil</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="tanggal">
-          <DataField>tanggal</DataField>
+        <Field Name="tanggalBeli">
+          <DataField>tanggalBeli</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="totalItem">
           <DataField>totalItem</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="totalBelanja">
-          <DataField>totalBelanja</DataField>
+        <Field Name="totalBeli">
+          <DataField>totalBeli</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="idPembelianDetil">
+          <DataField>idPembelianDetil</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="bayar">
-          <DataField>bayar</DataField>
+        <Field Name="jumlahBeli">
+          <DataField>jumlahBeli</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="subTotalBeli">
+          <DataField>subTotalBeli</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="kembali">
-          <DataField>kembali</DataField>
+        <Field Name="hargaBeli">
+          <DataField>hargaBeli</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NamaMerk">
+          <DataField>NamaMerk</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ukuran">
+          <DataField>ukuran</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="stok">
+          <DataField>stok</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="hargaJual">
+          <DataField>hargaJual</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="namaBarang">
+          <DataField>namaBarang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="namaJenis">
+          <DataField>namaJenis</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="status">
+          <DataField>status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="kodeBarang">
+          <DataField>kodeBarang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="namaSupplier">
+          <DataField>namaSupplier</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <Query>
@@ -68,32 +92,32 @@
       <rd:DataSetInfo>
         <rd:DataSetName>dbInventoryDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\dbInventoryDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>GridPenjualan</rd:TableName>
+        <rd:TableName>GridPembelian</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>GridPenjualanTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>GridPembelianTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.17175in</Width>
+              <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.81758in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.59352in</Width>
+              <Width>2.828in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.8905in</Width>
+              <Width>0.98425in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.66133in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -102,14 +126,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox6">
+                    <Textbox Name="Textbox39">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>kode Barang</Value>
+                              <Value>Kode Barang</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -120,7 +144,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <rd:DefaultName>Textbox39</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -136,7 +160,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox41">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -154,7 +178,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox41</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -170,14 +194,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox12">
+                    <Textbox Name="Textbox43">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>harga Jual</Value>
+                              <Value>Harga Beli</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -188,7 +212,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <rd:DefaultName>Textbox43</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -204,14 +228,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox14">
+                    <Textbox Name="Textbox45">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>jumlah Beli</Value>
+                              <Value>Jumlah Beli</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -222,7 +246,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox45</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -238,14 +262,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox47">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>sub Total</Value>
+                              <Value>Sub Total </Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -256,7 +280,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox47</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -337,25 +361,24 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="hargaJual">
+                    <Textbox Name="hargaBeli">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!hargaJual.Value</Value>
+                              <Value>=Fields!hargaBeli.Value</Value>
                               <Style>
                                 <Format>'Rp'#,0.00;('Rp'#,0.00)</Format>
+                                <rd:FormatSymbolCulture>id-ID</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>hargaJual</rd:DefaultName>
+                      <rd:DefaultName>hargaBeli</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -365,7 +388,6 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
-                        <rd:FormatSymbolCulture>id-ID</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -383,9 +405,7 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>jumlahBeli</rd:DefaultName>
@@ -404,26 +424,24 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="subTotal">
+                    <Textbox Name="subTotalBeli">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!subTotal.Value</Value>
+                              <Value>=Fields!subTotalBeli.Value</Value>
                               <Style>
                                 <Format>'Rp'#,0.00;('Rp'#,0.00)</Format>
                                 <rd:FormatSymbolCulture>id-ID</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>subTotal</rd:DefaultName>
+                      <rd:DefaultName>subTotalBeli</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -444,7 +462,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox24">
+                    <Textbox Name="Textbox54">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -458,7 +476,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox24</rd:DefaultName>
+                      <rd:DefaultName>Textbox54</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -474,7 +492,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox25">
+                    <Textbox Name="Textbox55">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -488,7 +506,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox25</rd:DefaultName>
+                      <rd:DefaultName>Textbox55</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -504,7 +522,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox26">
+                    <Textbox Name="Textbox59">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -518,7 +536,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox26</rd:DefaultName>
+                      <rd:DefaultName>Textbox59</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -534,7 +552,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox27">
+                    <Textbox Name="Textbox60">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -548,7 +566,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox27</rd:DefaultName>
+                      <rd:DefaultName>Textbox60</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -564,14 +582,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox28">
+                    <Textbox Name="Textbox58">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!subTotal.Value)</Value>
+                              <Value>=Sum(Fields!subTotalBeli.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>'Rp'#,0.00;('Rp'#,0.00)</Format>
@@ -579,12 +597,10 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <rd:DefaultName>Textbox58</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -615,16 +631,16 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>0.98425in</Size>
+                <Size>1.07711in</Size>
                 <CellContents>
-                  <Textbox Name="Textbox20">
+                  <Textbox Name="Textbox51">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>No Transaksi</Value>
+                            <Value>No Pembelian</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -635,7 +651,7 @@
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox20</rd:DefaultName>
+                    <rd:DefaultName>Textbox51</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -652,73 +668,66 @@
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
+              <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
+              <Group Name="Group1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!idPembelianMaster.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!idPembelianMaster.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixHeader>
+                <Size>1.07711in</Size>
+                <CellContents>
+                  <Textbox Name="Group1">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Fields!idPembelianMaster.Value</Value>
+                            <Style />
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Group1</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="Group1">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!noTransaksi.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!noTransaksi.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
-                  <TablixMembers>
-                    <TablixMember>
-                      <TablixHeader>
-                        <Size>0.98425in</Size>
-                        <CellContents>
-                          <Textbox Name="Group1">
-                            <CanGrow>true</CanGrow>
-                            <KeepTogether>true</KeepTogether>
-                            <Paragraphs>
-                              <Paragraph>
-                                <TextRuns>
-                                  <TextRun>
-                                    <Value>=Fields!noTransaksi.Value</Value>
-                                    <Style />
-                                  </TextRun>
-                                </TextRuns>
-                                <Style />
-                              </Paragraph>
-                            </Paragraphs>
-                            <rd:DefaultName>Group1</rd:DefaultName>
-                            <Style>
-                              <Border>
-                                <Color>LightGrey</Color>
-                                <Style>Solid</Style>
-                              </Border>
-                              <PaddingLeft>2pt</PaddingLeft>
-                              <PaddingRight>2pt</PaddingRight>
-                              <PaddingTop>2pt</PaddingTop>
-                              <PaddingBottom>2pt</PaddingBottom>
-                            </Style>
-                          </Textbox>
-                        </CellContents>
-                      </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember>
-                          <Group Name="Details" />
-                        </TablixMember>
-                        <TablixMember>
-                          <KeepWithGroup>Before</KeepWithGroup>
-                        </TablixMember>
-                      </TablixMembers>
-                    </TablixMember>
-                  </TablixMembers>
+                  <Group Name="Details" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetPenjualan</DataSetName>
-        <Top>0.67945cm</Top>
-        <Left>0.72337cm</Left>
+        <DataSetName>DataSetPembelian</DataSetName>
+        <Top>0.54716cm</Top>
+        <Left>1.35248cm</Left>
         <Height>1.8cm</Height>
-        <Width>23.9823cm</Width>
+        <Width>21.63875cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -726,13 +735,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.21238in</Height>
+    <Height>1.08333in</Height>
     <Style />
   </Body>
-  <Width>9.91389in</Width>
+  <Width>9.58414in</Width>
   <Page>
     <PageHeader>
-      <Height>1.95792cm</Height>
+      <Height>1.56104cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -754,8 +763,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.36195cm</Top>
-          <Left>0.36195cm</Left>
           <Height>0.6cm</Height>
           <Width>4.19333cm</Width>
           <Style>
@@ -790,8 +797,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.13834cm</Top>
-          <Left>0.36195cm</Left>
+          <Top>0.74111cm</Top>
           <Height>0.6cm</Height>
           <Width>5.43688cm</Width>
           <ZIndex>1</ZIndex>
@@ -805,6 +811,38 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line1">
+          <Top>1.35883cm</Top>
+          <Height>0cm</Height>
+          <Width>24.34372cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </Border>
+            <TopBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </TopBorder>
+            <BottomBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </LeftBorder>
+            <RightBorder>
+              <Color>Black</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </RightBorder>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -813,7 +851,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.76729cm</Height>
+      <Height>0.79375cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <Style>
@@ -831,6 +869,6 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
-  <rd:ReportID>bd8746bd-8c5b-4ab1-836e-3780d9eac414</rd:ReportID>
+  <rd:ReportID>8f521e8a-54d9-4246-a32c-b07e6c17adb1</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>

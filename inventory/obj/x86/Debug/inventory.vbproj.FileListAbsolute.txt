@@ -21,3 +21,4 @@ C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\invento
 C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.DialogBayar.resources
 C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.DialogPenjualan.resources
 C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.FormReportPenjualan.resources
+C:\Users\Jajang Nurjaman\documents\visual studio 2010\Projects\inventory\inventory\obj\x86\Debug\inventory.FormReportPembelian.resources

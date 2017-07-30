@@ -6,4 +6,8 @@
 
         Me.ReportViewer1.RefreshReport()
     End Sub
+
+    Private Sub FormReportPemesanan_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        Me.ReportViewer1.LocalReport.ReleaseSandboxAppDomain()
+    End Sub
 End Class

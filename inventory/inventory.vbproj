@@ -125,6 +125,12 @@
     <Compile Include="FormPengeluaran.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormReportPembelian.Designer.vb">
+      <DependentUpon>FormReportPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormReportPemesanan.Designer.vb">
       <DependentUpon>FormReportPemesanan.vb</DependentUpon>
     </Compile>
@@ -187,6 +193,9 @@
     <EmbeddedResource Include="FormPengeluaran.resx">
       <DependentUpon>FormPengeluaran.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportPembelian.resx">
+      <DependentUpon>FormReportPembelian.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReportPemesanan.resx">
       <DependentUpon>FormReportPemesanan.vb</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +214,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportPembelian.rdlc" />
     <EmbeddedResource Include="ReportPemesanan.rdlc" />
     <EmbeddedResource Include="ReportPenjualan.rdlc" />
   </ItemGroup>
@@ -428,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pie Chart_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Bag_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

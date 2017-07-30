@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormReportPemesanan
+Partial Class FormReportPembelian
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -45,28 +45,28 @@ Partial Class FormReportPemesanan
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "DataSetOrder"
+        ReportDataSource1.Name = "DataSetPembelian"
         ReportDataSource1.Value = Me.GridPembelianBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "inventory.ReportPemesanan.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "inventory.ReportPembelian.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(549, 410)
+        Me.ReportViewer1.Size = New System.Drawing.Size(284, 261)
         Me.ReportViewer1.TabIndex = 0
         '
         'GridPembelianTableAdapter
         '
         Me.GridPembelianTableAdapter.ClearBeforeFill = True
         '
-        'FormReportPemesanan
+        'FormReportPembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(549, 410)
+        Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "FormReportPemesanan"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormReportPemesanan"
+        Me.Name = "FormReportPembelian"
+        Me.Text = "FormReportPembelian"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.GridPembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dbInventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

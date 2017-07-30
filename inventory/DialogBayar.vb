@@ -32,11 +32,11 @@ Public Class DialogBayar
                 lbKembali.Text = Format(kembali, "Currency")
                 txtBayar.Text = Format(txtBayar.Text, "Currency")
                 PenjualanMasterTableAdapter.UpdateBayar(FormJual.NoTransaksiTextBox.Text, txtBayar.Text, kembali, FormJual.NoTransaksiTextBox.Text)
-                If MessageBox.Show("Cetak Kwitansi ?", "Pertanyaan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                    'FormReportKwitansi.ShowDialog()
-                Else
-                    Me.Close()
-                End If
+                'If MessageBox.Show("Cetak Kwitansi ?", "Pertanyaan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                '    'FormReportKwitansi.ShowDialog()
+                'Else
+                '    Me.Close()
+                'End If
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try

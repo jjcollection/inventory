@@ -126,7 +126,7 @@ Partial Class MenuUtama
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label4.Image = Global.inventory.My.Resources.Resources.Increase_25px
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(187, 4)
+        Me.Label4.Location = New System.Drawing.Point(179, 4)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(110, 24)
         Me.Label4.TabIndex = 1
@@ -141,7 +141,7 @@ Partial Class MenuUtama
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Image = Global.inventory.My.Resources.Resources.Create_Document_25px
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(85, 4)
+        Me.Label2.Location = New System.Drawing.Point(81, 4)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 24)
         Me.Label2.TabIndex = 1
@@ -156,7 +156,7 @@ Partial Class MenuUtama
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label6.Image = Global.inventory.My.Resources.Resources.Shopping_Bag_25px
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(581, 4)
+        Me.Label6.Location = New System.Drawing.Point(532, 4)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(146, 24)
         Me.Label6.TabIndex = 1
@@ -171,7 +171,7 @@ Partial Class MenuUtama
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label5.Image = Global.inventory.My.Resources.Resources.Pie_Chart_25px
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(413, 4)
+        Me.Label5.Location = New System.Drawing.Point(386, 4)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(146, 24)
         Me.Label5.TabIndex = 1
@@ -186,7 +186,7 @@ Partial Class MenuUtama
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label3.Image = Global.inventory.My.Resources.Resources.Deliver_Food_25px
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(301, 4)
+        Me.Label3.Location = New System.Drawing.Point(289, 4)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 24)
         Me.Label3.TabIndex = 1

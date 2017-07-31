@@ -53,7 +53,7 @@ Partial Class MenuUtama
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(36, 741)
+        Me.Panel1.Size = New System.Drawing.Size(36, 733)
         Me.Panel1.TabIndex = 10
         '
         'PictureBox3
@@ -197,9 +197,13 @@ Partial Class MenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 741)
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.inventory.My.Resources.Resources.utamaban
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ClientSize = New System.Drawing.Size(843, 733)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Oswald", 12.0!)
         Me.IsMdiContainer = True
         Me.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)

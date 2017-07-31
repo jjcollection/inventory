@@ -1,1 +1,1 @@
-# aplikasi inventori Toko Utama Ban
+# Aplikasi Inventory Toko Utama Ban
